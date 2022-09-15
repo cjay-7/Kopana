@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="head-logo-container">
+        <a href="../index.html"
+          ><img class="head-logo" src="../images/KOPA.webp" alt="logo"
+        /></a>
+      </div>
+      <div class="head-list">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="AboutUs.html">About Us</a></li>
+          <li><a href="News.html">News</a></li>
+          <li><a href="News.html">Schedule</a></li>
+          <li><a href="News.html">Gallery</a></li>
+          <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="story" id="story">
+      <!-- Our Story -->
+
+      <div class="story-container">
+        <h1>Our Story</h1>
+        <p>
+          Founded on 18th September 2015, <br />
+          Kopana Football School is an
+          <b>after-school football-training program</b> for <b>children</b>,
+          <br />
+          from the ages of 2.5 till 18.
+        </p>
+        <button type="button" class="story-button" onclick="scrollWin()">
+          <i class="fa-solid fa-chevron-down"></i> Learn More
+        </button>
+      </div>
+
+      <!-- timeline -->
+
+      <div class="swiper my-timelineSwiper">
+        <div class="timeline-wrapper swiper-wrapper">
+          <div class="timeline-slide swiper-slide">
+            <h1>Slide 1</h1>
+            <hr class="timeline-hr-1" />
+          </div>
+          <div class="timeline-slide swiper-slide">
+            Slide 2
+            <hr class="timeline-hr-2" />
+          </div>
+          <div class="timeline-slide swiper-slide">Slide 3</div>
+          <div class="timeline-slide swiper-slide">Slide 4</div>
+          <div class="timeline-slide swiper-slide">
+            Slide 5
+            <hr class="timeline-hr-5" />
+          </div>
+          <div class="timeline-slide swiper-slide">Slide 6</div>
+          <div class="timeline-slide swiper-slide">Slide 7</div>
+          <div class="timeline-slide swiper-slide">
+            Slide 8
+            <hr class="timeline-hr-8" />
+          </div>
+          <div class="timeline-slide swiper-slide">Slide 9</div>
+          <div class="timeline-slide swiper-slide">Slide 10</div>
+          <div class="timeline-slide swiper-slide">
+            Slide 11
+            <hr class="timeline-hr-5" />
+          </div>
+          <div class="timeline-slide swiper-slide">Slide 12</div>
+        </div>
+        <div class="timeline-dates">
+          <a href="">2009</a>
+          <a href="">2015</a>
+
+          <a href="">2016</a>
+          <a href="">2017</a>
+
+          <a href="">2018</a>
+
+          <a href="">2019</a>
+          <a href="">2020</a>
+        </div>
+        <div class="swiper-pagination-1"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Story Continued -->
+    <section class="story-continued" id="story-continued">
+      <div class="story-continued-container">
+        <div class="story-continued-textbox-1">
+          <p data-aos="fade-right">
+            What started as a class for 2 students, has now blossomed into a
+            buzzing sports club with more than 400 children who learn the
+            nuances of football in a fun, professional, safe and growthcentric
+            environment.
+          </p>
+          <img
+            class="story-continued-img1"
+            src="../Images/aboutus2.jpeg"
+            alt="aboutus3"
+            data-aos="fade-left"
+          />
+        </div>
+        <div class="story-continued-textbox-2">
+          <img
+            class="story-continued-img2"
+            src="../Images/aboutus3.jpeg"
+            alt="aboutus2"
+            data-aos="fade-right"
+          />
+          <p data-aos="fade-left">
+            At Kopana Football School, we pride ourselves on offering
+            progressive football coaching for students from all backgrounds and
+            all abilities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="moto less-dark">
+      <div class="moto-container">
+        <h1>Our Moto</h1>
+        <div class="moto-container-flexbox">
+          <img
+            class="moto-img"
+            src="../Images/aboutus4.jpg"
+            alt="aboutus4"
+            data-aos="fade-right"
+          />
+          <div class="moto-text-box" data-aos="fade-down">
+            <h1>01</h1>
+            <h2>Mission</h2>
+            <p>
+              To spread the joy of football whilst inculcating life skills and
+              socio - emotional learning in as many young individuals as
+              possible, so that everyone who wants to play football can.
+            </p>
+          </div>
+          <div class="moto-text-box" data-aos="fade-up">
+            <h1>02</h1>
+            <h2>Vision</h2>
+            <p>
+              We aim to develop players to excel at the traditional 11-aside
+              format of the game, in order to set up competitive teams in the
+              future. Our objective is to be a pro-club within the next 10
+              years.
+            </p>
+          </div>
+          <div class="moto-text-box" data-aos="fade-down">
+            <h1>03</h1>
+            <h2>Objective</h2>
+            <p>
+              To position Kopana Football School as the premier platform for
+              football-related youth development in India, by offering programs
+              with an integrated, hands on approach to sport, across a variety
+              of age groups and competition levels.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="index.js"></script>
+    
+  </body>
+</html>

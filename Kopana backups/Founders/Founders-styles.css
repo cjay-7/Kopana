@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+body {
+  background-color: #131416;
+}
+
+.less-dark {
+  background-color: #202125;
+}
+b {
+  font-weight: 600;
+}
+
+.founders .swiper {
+  margin: 2% 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  --swiper-navigation-color: #fff;
+  --swiper-pagination-color: #fff;
+}
+
+.myFoundersSwiper .swiper-slide {
+  font-size: 18px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 60px;
+}
+
+.parallax-bg-1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 137%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/gary.webp);
+}
+.parallax-bg-2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 120%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/baps.jpg);
+}
+
+.Founders-title {
+  font-size: 41px;
+  font-weight: 300;
+  padding: 1% 2%;
+}
+
+.Founders-subtitle {
+  font-size: 21px;
+  padding: 1% 2%;
+}
+
+.Founders-text {
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 1% 2%;
+}
+.slide-text-wrapper {
+  margin: 1% 12%;
+  border: 1px;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  line-height: 1.4;
+  width: 35%;
+  padding: 3% 2%;
+}
+
+/* from here */
+
+.founders {
+  position: relative;
+  width: 100%;
+  margin-top: 12%;
+}
+
+.founders-head {
+  font-size: 60px;
+  background-color: #e2e2e3;
+  color: #000;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.founders-head-wrapper {
+  position: relative;
+  top: 45px;
+  left: 135px;
+  padding: 4% 0;
+  /* border: 1px;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.4); */
+  width: 40%;
+}
+
+.founders-fn-container {
+  background-color: #000;
+  display: inline-block;
+  padding: 1% 2.5% 0 2.5%;
+}
+
+.founders-fn {
+  color: #fff;
+  padding: 0;
+  font-size: 70px;
+  font-weight: 900;
+  letter-spacing: 7px;
+  z-index: 1;
+}
+
+.founders-ln-container {
+  background-color: #fff;
+  display: inline-block;
+  padding: 0 2%;
+  margin-left: 10%;
+}
+.founders-ln {
+  color: #000;
+  padding: 0;
+  font-size: 70px;
+  font-weight: 900;
+  letter-spacing: 7px;
+  z-index: 2;
+  position: relative;
+  bottom: 20px;
+}
