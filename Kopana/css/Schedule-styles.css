@@ -27,7 +27,7 @@ body {
 }
 .calendar-container {
   display: flex;
-  margin: 12% auto 2%;
+  margin: 10% auto 2%;
   justify-content: center;
 }
 
@@ -82,8 +82,8 @@ body {
 }
 
 .month {
-  /*overflow: hidden;*/
   opacity: 0;
+  height: 490px;
 }
 
 .month.new {
@@ -122,12 +122,13 @@ body {
 
 .week {
   background: #4a4a4a;
+  height: 20%;
 }
 
 .day {
   display: inline-block;
   width: 14%;
-  padding: 10px;
+  padding: 22px 10px;
   text-align: center;
   vertical-align: top;
   cursor: pointer;
@@ -195,8 +196,6 @@ body {
   width: 20vw;
   height: 570px;
   background: rgba(164, 164, 164, 1);
-
-  border-radius: 4px;
 }
 
 .details.in {
