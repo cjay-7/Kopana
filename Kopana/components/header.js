@@ -199,7 +199,7 @@ headerTemplate.innerHTML = `
         <li><a href="../index.html">Home</a></li>
         <li><a href="../html/AboutUs.html">About Us</a></li>
         <li><a href="../html/News.html">News</a></li>
-        <li><a href="../html/News.html">Schedule</a></li>
+        <li><a href="../html/Schedule.html">Schedule</a></li>
         <li><a href="../html/News.html">Gallery</a></li>
         <li><a href="../html/ContactUs.html">Contact Us</a></li>
       </ul>
@@ -238,13 +238,6 @@ class Header extends HTMLElement {
       }
     });
 
-    // if (headList.getAttribute("data-visible") === "true") {
-    //   window.addEventListener("scroll", function () {
-    //     var currentScroll = window.scrollY;
-    //     var isDown = currentScroll > previousScroll;
-    //     headList.setAttribute("data-visible", false, window.scrollY > 0);
-    //   });
-    // }
     (function () {
       var previousScroll = 0;
 
