@@ -367,4 +367,5 @@
   function addDate(ev) {}
 
   var calendar = new Calendar("#calendar", data);
+  
 })();
