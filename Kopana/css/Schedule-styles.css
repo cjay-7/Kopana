@@ -11,13 +11,11 @@
 }
 
 body {
-  font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight",
-    "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 100;
   color: rgba(255, 255, 255, 1);
   margin: 0;
   padding: 0;
-  background-color: #131416;
+  background-color: #18181b;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -27,8 +25,9 @@ body {
 }
 .calendar-container {
   display: flex;
-  margin: 10% auto 2%;
+  margin: 12% auto 2%;
   justify-content: center;
+  border-radius: 5px;
 }
 
 #calendar {
@@ -36,17 +35,19 @@ body {
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   width: 70vw;
-  height: 570px;
+  height: 75vh;
   overflow: hidden;
+  border-radius: 15px 0 0 15px;
 }
 
 .header {
-  height: 50px;
+  height: 7vh;
   width: 70vw;
-  background: rgba(66, 66, 66, 1);
+  background: #26272c;
   text-align: center;
   position: relative;
   z-index: 100;
+  top: 30px;
 }
 
 .header h1 {
@@ -83,7 +84,9 @@ body {
 
 .month {
   opacity: 0;
-  height: 490px;
+  height: 65vh;
+  position: relative;
+  top: 30px;
 }
 
 .month.new {
@@ -121,18 +124,18 @@ body {
 }
 
 .week {
-  background: #4a4a4a;
+  background: #303137;
   height: 20%;
 }
 
 .day {
   display: inline-block;
   width: 14%;
-  padding: 22px 10px;
+  padding: 16px 10px;
   text-align: center;
   vertical-align: top;
   cursor: pointer;
-  background: #4a4a4a;
+  background: #303137;
   position: relative;
   z-index: 100;
 }
@@ -151,6 +154,10 @@ body {
   margin-bottom: 5px;
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.7px;
+}
+.day-fullname,
+.day-month {
+  display: none;
 }
 
 .day-number {
@@ -194,33 +201,36 @@ body {
 .details {
   position: relative;
   width: 20vw;
-  height: 570px;
-  background: rgba(164, 164, 164, 1);
+  height: 75vh;
+  background: #0c8346;
+  border-radius: 0 15px 15px 0;
 }
 
 .details.in {
-  -webkit-animation: moveFromTopFade 0.5s ease both;
-  -moz-animation: moveFromTopFade 0.5s ease both;
-  animation: moveFromTopFade 0.5s ease both;
+  -webkit-animation: moveFromRightFade 0.5s ease both;
+  -moz-animation: moveFromRightFade 0.5s ease both;
+  animation: moveFromRightFade 0.5s ease both;
 }
 
 .details.out {
-  -webkit-animation: moveToTopFade 0.5s ease both;
-  -moz-animation: moveToTopFade 0.5s ease both;
-  animation: moveToTopFade 0.5s ease both;
+  -webkit-animation: moveToLeftFade 0.5s ease both;
+  -moz-animation: moveToLeftFade 0.5s ease both;
+  animation: moveToLeftFade 0.5s ease both;
+  width: 0px;
 }
 
-.arrow {
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  margin-left: -2px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 0 5px 5px 5px;
-  border-color: transparent transparent rgba(164, 164, 164, 1) transparent;
-  transition: all 0.7s ease;
+.currentDay {
+  padding: 10% 7%;
+  text-align: center;
+}
+.currentDayName,
+.currentDaMonth {
+  font-size: 26px;
+  font-weight: 400;
+}
+.currentDayNumber {
+  font-size: 100px;
+  line-height: 0.9;
 }
 
 .events {
@@ -254,11 +264,12 @@ body {
 }
 
 .event {
-  font-size: 16px;
+  font-size: 13px;
   line-height: 22px;
   letter-spacing: 0.5px;
   padding: 2px 16px;
   vertical-align: top;
+  text-align: center;
 }
 
 .event.empty {
@@ -280,9 +291,13 @@ body {
 
 .legend {
   width: 100%;
-  height: 30px;
-  background: rgba(60, 60, 60, 1);
+  height: 4.5vh;
+  background: rgb(38 39 44 / 50%);
   line-height: 30px;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  padding: 0 10px;
 }
 
 .entry {

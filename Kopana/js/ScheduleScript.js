@@ -156,11 +156,15 @@
     var outer = createElement("div", this.getDayClass(day));
     outer.addEventListener("click", function () {
       self.openDay(this);
+      var thisday = this.querySelector(".day-fullname").innerHTML;
+
+      return thisday;
     });
 
     //Day Name
     var name = createElement("div", "day-name", day.format("ddd"));
-
+    var dayName = createElement("div", "day-fullname", day.format("dddd"));
+    var dayMonth = createElement("div", "day-month", day.format("MMMM"));
     //Day Number
     var number = createElement("div", "day-number", day.format("DD"));
 
@@ -169,6 +173,8 @@
     this.drawEvents(day, events);
 
     outer.appendChild(name);
+    outer.appendChild(dayName);
+    outer.appendChild(dayMonth);
     outer.appendChild(number);
     outer.appendChild(events);
     this.week.appendChild(outer);
@@ -205,7 +211,22 @@
     var dayNumber =
       +el.querySelectorAll(".day-number")[0].innerText ||
       +el.querySelectorAll(".day-number")[0].textContent;
+
+    var dayFullName = el.querySelector(".day-fullname").innerText;
+    var dayMonth = el.querySelector(".day-month").innerText;
+
     var day = this.current.clone().date(dayNumber);
+
+    var currentDay = createElement("div", "currentDay");
+    var currentDayName = createElement("h3", "currentDayName");
+    currentDayName.innerHTML = dayFullName;
+    var currentDayNumber = createElement("h1", "currentDayNumber");
+    currentDayNumber.innerHTML = dayNumber;
+    var currentDaMonth = createElement("h2", "currentDaMonth");
+    currentDaMonth.innerHTML = dayMonth;
+    currentDay.appendChild(currentDayName);
+    currentDay.appendChild(currentDayNumber);
+    currentDay.appendChild(currentDaMonth);
 
     var currentOpened = document.querySelector(".details");
 
@@ -238,6 +259,7 @@
       var calendarContainer = document.querySelector(".calendar-container");
 
       calendarContainer.appendChild(details);
+      details.appendChild(currentDay);
     }
 
     var todaysEvents = this.events.reduce(function (memo, ev) {
@@ -367,5 +389,4 @@
   function addDate(ev) {}
 
   var calendar = new Calendar("#calendar", data);
-  
 })();
