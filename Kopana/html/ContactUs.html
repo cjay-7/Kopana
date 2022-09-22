@@ -12,15 +12,15 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <!-- font awesome -->
     <link rel="stylesheet" href="../css/all.min.css" />
     <!-- custom stylesheet -->
     <link rel="stylesheet" href="../css/ContactUs-styles.css" />
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css"
-    />
     <!-- On scroll animation -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- header script -->
@@ -30,5 +30,114 @@
   <body>
     <!-- Navbar -->
     <header-component> </header-component>
+
+    <!-- contact us form -->
+    <section class="form-section">
+      <div class="container flex">
+        <div class="info-container">
+          <h1>Contact Us!</h1>
+          <div class="info">
+            <h3><i class="fa-solid fa-phone"></i> +91 9999999999</h3>
+            <h3><i class="fa-solid fa-envelope"></i> xyz@abc.com</h3>
+            <h3><i class="fa-solid fa-location-dot"></i> xyz ground juhu</h3>
+          </div>
+          <div class="socials">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+        <div class="form-container">
+          <h1>
+            Let's take your skills to the next level
+            <i class="fa-solid fa-arrow-trend-up"></i>
+          </h1>
+          <form id="contact" action="">
+            <div class="group">
+              <label for="fname">First Name</label>
+              <input
+                type="text"
+                name="fname"
+                id="fname"
+                placeholder="John"
+                required
+              />
+            </div>
+            <div class="group">
+              <label for="lname">Last Name</label>
+              <input
+                type="text"
+                name="lname"
+                id="lname"
+                placeholder="Doe"
+                required
+              />
+            </div>
+            <div class="group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="youremail@football.com"
+                required
+              />
+            </div>
+            <div class="group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <h4>Category</h4>
+            <div class="radio-container">
+              <!-- radio -->
+              <input type="radio" name="category" id="category1" required />
+              <label for="category1" class="lbl-radio lbl-radio-small">
+                <div class="marker"></div>
+                <div class="content">
+                  <div class="title">U4</div>
+                </div>
+              </label>
+
+              <!-- radio -->
+              <input type="radio" name="category" id="category2" required />
+              <label for="category2" class="lbl-radio lbl-radio-small">
+                <div class="marker"></div>
+                <div class="content">
+                  <div class="title">U6</div>
+                </div>
+              </label>
+
+              <!-- radio -->
+              <input type="radio" name="category" id="category3" required />
+              <label for="category3" class="lbl-radio lbl-radio-big">
+                <div class="marker"></div>
+                <div class="content">
+                  <div class="title">U8 / U10 / U12</div>
+                </div>
+              </label>
+
+              <!-- radio -->
+              <input type="radio" name="category" id="category4" required />
+              <label for="category4" class="lbl-radio lbl-radio-big">
+                <div class="marker"></div>
+                <div class="content">
+                  <div class="title">U14 / U16 / U18</div>
+                </div>
+              </label>
+            </div>
+
+            <input type="submit" class="btn" id="submit" />
+          </form>
+          <div class="alert alert-info" style="display: none"></div>
+          <div class="alert alert-error" style="display: none"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer-component></footer-component>
+
+    <script src="../js/ContactUsScript.js" charset="utf-8"></script>
   </body>
 </html>

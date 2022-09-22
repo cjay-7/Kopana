@@ -26,12 +26,12 @@ b {
   width: 100%;
   background: url(../Images/3040.webp);
   background-size: cover;
-  padding: 200px 100px;
+  height: 100vh;
 }
 
 .banner-container {
   position: relative;
-  top: 150px;
+  top: 50%;
   background-color: rgba(0, 0, 0, 0.4);
   border: 1px;
   border-radius: 50px;
@@ -40,6 +40,7 @@ b {
   vertical-align: middle;
   transition: 0.6s;
   padding: 2% 0;
+  margin: 0 9%;
 }
 
 .banner-container h1 {
@@ -52,10 +53,10 @@ b {
   display: inline-block;
   font-size: 40px;
   transition: 0.6s;
-  padding: 0 5% 0% 5%;
+  padding: 0 4%;
 }
 .banner-container p {
-  padding: 0 5% 2% 5%;
+  padding: 0 4% 2%;
   line-height: 1.8;
   font-size: 22px;
   color: #fafafa;
@@ -71,7 +72,7 @@ b {
   opacity: 1;
   transition: 0.6s;
   display: inline-block;
-  margin: 10px 0 10px 50px;
+  margin: 1% 0 1% 4%;
 }
 .banner-button-white {
   border: 1px solid #fff;
@@ -210,11 +211,12 @@ b {
   text-align: center;
 }
 .centers-card {
-  width: 35%;
+  width: 35vw;
   border: 1px #fff solid;
   border-radius: 13%;
   margin: 0 20px;
   background-color: #1c1f22;
+  height: fit-content;
 }
 .centers-card_container {
   display: flex;
@@ -223,7 +225,7 @@ b {
 }
 .centers-card-img {
   width: 95%;
-  height: 55%;
+  height: 30vh;
   display: block;
   margin: 0 auto;
   border: 1px;
@@ -237,7 +239,7 @@ b {
 .centers-card-body h1 {
   font-size: 18px;
   color: #fff;
-  margin: 5px 0;
+  margin: 5px -10px;
 }
 .centers-card-body h6 {
   color: #ececec;
@@ -258,7 +260,7 @@ b {
   opacity: 1;
   transition: 0.6s;
   display: inline-block;
-  margin: 10px 0 10px 25px;
+  margin: 10px 0 10px 0px;
 }
 .centers-card-button-white {
   border: 1px solid #fff;
@@ -674,7 +676,7 @@ b {
   border: 4px solid #1c1f22;
 }
 .name {
-  font-size: 1em;
+  font-size: 1.1vw;
   font-weight: 500;
   color: #e2e2e3;
   text-align: center;
@@ -763,7 +765,6 @@ b {
   .swiper-pagination {
     top: 210px;
   }
-
 }
 /* subscribe */
 

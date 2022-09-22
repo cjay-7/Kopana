@@ -213,18 +213,22 @@ body {
   height: 75vh;
   background: #0c8346;
   border-radius: 15px 0 0 15px;
-}
-
-.details.in {
-  -webkit-animation: moveFromRightFade 0.5s ease both;
-  -moz-animation: moveFromRightFade 0.5s ease both;
-  animation: moveFromRightFade 0.5s ease both;
-}
-
-.details.out {
   -webkit-animation: moveToLeftFade 0.5s ease both;
   -moz-animation: moveToLeftFade 0.5s ease both;
   animation: moveToLeftFade 0.5s ease both;
+}
+
+.details.in {
+  -webkit-animation: moveToLeftFade 0.5s ease both;
+  -moz-animation: moveToLeftFade 0.5s ease both;
+  animation: moveToLeftFade 0.5s ease both;
+}
+
+.details.out {
+  -webkit-animation: moveFromRightFade 0.5s ease both;
+  -moz-animation: moveFromRightFade 0.5s ease both;
+  animation: moveFromRightFade 0.5s ease both;
+  visibility: hidden;
   width: 0px;
 }
 

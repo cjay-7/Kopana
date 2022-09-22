@@ -94,7 +94,7 @@ hr {
   width: 39px;
 }
 .timeline-hr-8 {
-  width: 84px;
+  width: 52px;
 }
 .timeline-hr-11 {
   width: 33px;
@@ -117,8 +117,13 @@ hr {
 .timeline--arrow-8 {
   position: absolute;
   top: 10.5%;
-  left: 128%;
+  left: 113%;
   color: #fff !important;
+}
+.timeline--arrow-11 {
+  position: absolute !important;
+  top: 80.5% !important;
+  left: 103% !important;
 }
 
 #timeline.swiper {
@@ -372,11 +377,11 @@ hr {
   }
 
   .timeline-hr-8 {
-    width: 52px !important;
+    width: 27px !important;
   }
 
   .timeline--arrow-8 {
-    left: 113% !important;
+    left: 107% !important;
   }
 
   .timeline-hr-11 {
@@ -386,7 +391,7 @@ hr {
 
   .timeline--arrow-11 {
     position: absolute !important;
-    top: 80.5% !important;
+    top: 30.5% !important;
     left: 103% !important;
   }
 
