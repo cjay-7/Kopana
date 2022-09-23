@@ -86,7 +86,6 @@ button.white:hover {
 .banner-container h2 {
   display: inline-block;
   font-size: 40px;
-
   padding: 0 4%;
 }
 .banner-container p {
@@ -101,24 +100,15 @@ button.white:hover {
   .banner {
     background: url(../images/_DSC5512.jpg);
     background-size: cover;
-    padding: 0;
-    height: 100vh;
   }
   .banner-container {
-    position: relative;
     top: 40%;
     width: 70vw;
-    background-color: rgba(0, 0, 0, 0.4);
-
     line-height: 1.5;
-
-    transition: 0.6s;
-
     margin: auto;
   }
   .banner-container h2 {
     font-size: 26px;
-    transition: 0.6s;
     padding: 0 8%;
   }
   .banner-first-header {
@@ -128,7 +118,6 @@ button.white:hover {
     padding: 0 8% 2%;
     line-height: 1.5;
     font-size: 16px;
-    transition: 0.6s;
   }
   .banner-button {
     padding: 3% 5%;
