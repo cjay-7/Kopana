@@ -18,7 +18,7 @@ h1 {
   padding: 2% 3%;
 }
 b {
-  font-weight: 900;
+  font-weight: 700;
 }
 .flex {
   display: flex;
@@ -350,6 +350,9 @@ button.white:hover {
   .centers-card-button {
     margin: 1% 0 8% -1%;
   }
+  .centers-card-button.white {
+    margin: 1% 0 8% 1%;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -423,7 +426,7 @@ button.white:hover {
   left: 0;
   display: block;
   z-index: 3333;
-  height: 12px;
+  height: 20px;
 }
 
 .testimonial .dots .dot {
@@ -774,6 +777,7 @@ button.white:hover {
    */
   margin: 20px 0;
   background: url(../Images/subscribe.webp);
+  background-size: cover;
 }
 .subscribe-head {
   color: #fff;
@@ -807,9 +811,15 @@ button.white:hover {
   width: 200px;
 }
 .subscribe-form-container a {
-  color: white;
+  color: #dadada;
   padding-top: 20px;
   display: block;
+  font-weight: 100;
+  text-decoration: underline 1px;
+}
+.subscribe-Button {
+  background-color: white !important;
+  color: #000 !important;
 }
 input::placeholder {
   color: #fff;
