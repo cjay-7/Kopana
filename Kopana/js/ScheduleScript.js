@@ -55,6 +55,9 @@
       this.header.className = "header";
 
       this.title = createElement("h1");
+      this.title.addEventListener("click", function () {
+        self.curMonth();
+      });
 
       var right = createElement("div", "right");
       right.addEventListener("click", function () {
@@ -109,7 +112,9 @@
 
   Calendar.prototype.backFill = function () {
     var clone = this.current.clone();
-    var dayOfWeek = clone.day();
+    var dayOfWeek = clone.day() - 1;
+
+    if (dayOfWeek == -1) dayOfWeek = 6;
 
     if (!dayOfWeek) {
       return;
@@ -126,11 +131,11 @@
     var clone = this.current.clone().add("months", 1).subtract("days", 1);
     var dayOfWeek = clone.day();
 
-    if (dayOfWeek === 6) {
+    if (dayOfWeek === 7) {
       return;
     }
 
-    for (var i = dayOfWeek; i < 6; i++) {
+    for (var i = dayOfWeek; i < 7; i++) {
       this.drawDay(clone.add("days", 1));
     }
   };
@@ -145,7 +150,7 @@
   };
 
   Calendar.prototype.getWeek = function (day) {
-    if (!this.week || day.day() === 0) {
+    if (!this.week || day.day() === 1) {
       this.week = createElement("div", "week");
       this.month.appendChild(this.week);
     }
@@ -156,12 +161,17 @@
     this.getWeek(day);
 
     //Outer Day
+    // var clickState = 0;
     var outer = createElement("div", this.getDayClass(day));
     outer.addEventListener("click", function () {
+      // if (this.classList.contains("active")) {
+      //   self.closeDay(this);
+      // } else {
       self.openDay(this);
-      var thisday = this.querySelector(".day-fullname").innerHTML;
+      // }
+      // var thisday = this.querySelector(".day-fullname").innerHTML;
 
-      return thisday;
+      // return thisday;
     });
 
     //Day Name
@@ -208,6 +218,33 @@
     }
     return classes.join(" ");
   };
+  // Calendar.prototype.closeDay = function (el) {
+  //   // var details, arrow;
+  //   // var dayNumber = +el.querySelectorAll(".day-number")[0].innerText || +el.querySelectorAll(".day-number")[0].textContent;
+  //   // var day = this.current.clone().date(dayNumber);
+  //   var daysActive = document.querySelectorAll(".day.active");
+
+  //   [].forEach.call(daysActive, function (i) {
+  //     i.classList.remove("active");
+  //   });
+  //   var currentOpened = document.querySelector(".details");
+
+  //   if (currentOpened) {
+  //     currentOpened.addEventListener("webkitAnimationEnd", function () {
+  //       currentOpened.parentNode.removeChild(currentOpened);
+  //     });
+  //     currentOpened.addEventListener("oanimationend", function () {
+  //       currentOpened.parentNode.removeChild(currentOpened);
+  //     });
+  //     currentOpened.addEventListener("msAnimationEnd", function () {
+  //       currentOpened.parentNode.removeChild(currentOpened);
+  //     });
+  //     currentOpened.addEventListener("animationend", function () {
+  //       currentOpened.parentNode.removeChild(currentOpened);
+  //     });
+  //     currentOpened.className = "details out";
+  //   }
+  // };
 
   Calendar.prototype.openDay = function (el) {
     var details;
@@ -225,11 +262,15 @@
     currentDayName.innerHTML = dayFullName;
     var currentDayNumber = createElement("h1", "currentDayNumber");
     currentDayNumber.innerHTML = dayNumber;
-    var currentDaMonth = createElement("h2", "currentDaMonth");
-    currentDaMonth.innerHTML = dayMonth;
+    var currentDayMonth = createElement("h2", "currentDayMonth");
+    currentDayMonth.innerHTML = dayMonth;
     currentDay.appendChild(currentDayName);
     currentDay.appendChild(currentDayNumber);
-    currentDay.appendChild(currentDaMonth);
+    currentDay.appendChild(currentDayMonth);
+    // [].forEach.call(daysActive, function (i) {
+    //   i.classList.remove("active");
+    // });
+    // el.classList.add("active");
 
     var currentOpened = document.querySelector(".details");
 
@@ -261,8 +302,16 @@
       //Create the event wrapper
       var calendarContainer = document.querySelector(".calendar-container");
 
+      // var screenwidth = window.screen.width;
+
+      // console.log(screenwidth);
+      // if (screenwidth > 425) {
       calendarContainer.appendChild(details);
       details.appendChild(currentDay);
+      // } else if (screenwidth < 425) {
+      //   el.parentNode.appendChild(details);
+      //   details.appendChild(currentDay);
+      // }
     }
 
     var todaysEvents = this.events.reduce(function (memo, ev) {
@@ -335,6 +384,10 @@
     this.next = false;
     this.draw();
   };
+  // Calendar.prototype.curMonth = function () {
+  //   this.current = moment().date(1);
+  //   this.draw();
+  // };
 
   window.Calendar = Calendar;
 

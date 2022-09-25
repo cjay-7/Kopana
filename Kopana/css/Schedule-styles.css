@@ -237,7 +237,7 @@ body {
   text-align: center;
 }
 .currentDayName,
-.currentDaMonth {
+.currentDayMonth {
   font-size: 26px;
   font-weight: 400;
 }
@@ -519,5 +519,55 @@ body {
     opacity: 0;
     padding: 0px;
     height: 0px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #calendar {
+    width: 100vw;
+    border-radius: 0 0 15px 15px;
+    height: 52vh;
+  }
+  .calendar-container {
+    margin: 24% auto 2%;
+    flex-direction: column-reverse;
+  }
+
+  .header {
+    width: 100vw;
+  }
+  .month {
+    height: 54vh;
+  }
+  .week {
+    height: 16%;
+  }
+
+  .entry {
+    margin: 0;
+  }
+  .day {
+    padding: 0;
+    width: 14%;
+    margin: 10px 0;
+  }
+  .details {
+    position: relative;
+    width: 100vw;
+    height: 15vh;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+  }
+  .currentDay {
+    padding: 0;
+    text-align: initial;
+
+    margin: 2% 3%;
+  }
+  .currentDayNumber {
+    font-size: 65px;
+  }
+  .currentDayName,
+  .currentDayMonth {
+    font-size: 24px;
   }
 }

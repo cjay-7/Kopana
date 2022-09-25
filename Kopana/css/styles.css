@@ -117,20 +117,27 @@ button.white:hover {
   padding: 0 4%;
 }
 .banner-container p {
-  padding: 0 4% 2%;
+  padding: 0 13% 1% 4%;
   line-height: 1.8;
   font-size: 22px;
   color: #fafafa;
 }
 
-/* Extra small devices (phones, 600px and down) */
+/* Exta Small devices (phones, 300px and down) */
+@media only screen and (max-width: 400px) {
+  .banner-container {
+    top: 40% !important;
+  }
+}
+/* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .banner {
     background: url(../images/_DSC5512.jpg);
     background-size: cover;
+    background-position-x: center;
   }
   .banner-container {
-    top: 40%;
+    top: 55%;
     width: 70vw;
     line-height: 1.5;
     margin: auto;
@@ -269,7 +276,6 @@ button.white:hover {
   padding: 8px 14px;
   margin: 1% 0 3% 1%;
 }
-
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
