@@ -135,9 +135,10 @@ button.white:hover {
     background: url(../images/_DSC5512.jpg);
     background-size: cover;
     background-position-x: center;
+    overflow-x: hidden;
   }
   .banner-container {
-    top: 55%;
+    top: 45%;
     width: 70vw;
     line-height: 1.5;
     margin: auto;
@@ -281,6 +282,7 @@ button.white:hover {
 @media only screen and (max-width: 600px) {
   .centers {
     margin: 15% 5% 0;
+    overflow-x: hidden;
   }
   .centers-head {
     padding: 2% 0;
@@ -704,10 +706,12 @@ button.white:hover {
 @media only screen and (max-width: 600px) {
   .partners {
     display: block;
-    height: 50vh;
+    height: 40vh;
+    overflow: hidden;
   }
   .partner-header {
-    margin-bottom: 5%;
+    padding: 5% 0;
+    margin-bottom: 2%;
     text-align: center;
   }
   .swiper-slide {
@@ -826,6 +830,9 @@ input::placeholder {
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .subscribe-form-container {
+    background-position-x: 11%;
+  }
   .subscribe-form-container input {
     display: block;
     margin: 3% auto;
