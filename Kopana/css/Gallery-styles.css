@@ -75,6 +75,11 @@ figure {
   overflow-x: hidden;
 }
 
+@media screen and (max-width: 600px) {
+  #gallery-page {
+    margin-top: 20%;
+  }
+}
 #gallery-image-grid {
   margin-top: 15px;
   padding-bottom: 15px;
