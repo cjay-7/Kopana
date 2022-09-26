@@ -485,7 +485,7 @@ hr {
   padding: 1.5% 20px;
   background-color: #fff;
   color: #000;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: normal;
   opacity: 1;
   transition: 1s;
@@ -656,7 +656,7 @@ hr {
 }
 
 .Founders-title {
-  font-size: 41px;
+  font-size: 37px;
   font-weight: 300;
   padding: 1% 2%;
 }
@@ -679,20 +679,6 @@ hr {
   line-height: 1.4;
   width: 35%;
   padding: 3% 2%;
-}
-
-.swiper-button-prev {
-  top: 175px !important;
-  left: 95px !important;
-  /* width: calc(var(--swiper-navigation-size) / 2 * 27) !important; */
-}
-
-.swiper-button-next {
-  top: 175px !important;
-  right: 565px !important;
-}
-.Founder-Pagination {
-  left: -245px !important;
 }
 
 /* from here */
