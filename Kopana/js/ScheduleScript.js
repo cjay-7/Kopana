@@ -411,21 +411,18 @@
       color: "orange",
       date: "2022-03-08",
     },
-
     {
       eventName: "U6's",
       calendar: "U6's",
       color: "blue",
       date: "2022-09-28",
     },
-
     {
       eventName: "U8's / U10's / U12's",
       calendar: "U8's / U10's / U12's",
       color: "yellow",
       date: "2022-09-20",
     },
-
     {
       eventName: "U14's / U16's / U18's",
       calendar: "U14's / U16's / U18's",
@@ -436,28 +433,47 @@
 
   var calendar = new Calendar("#calendar", data);
 
-  var d = new Date(),
-    year = d.getYear(),
-    mondays = [];
+  // var d = new Date(),
+  //   year = d.getYear(),
+  //   mondays = [];
 
-  d.setDate(1);
+  // d.setDate(1);
 
-  // Get the first Monday in the month
-  while (d.getDay() !== 1) {
-    d.setDate(d.getDate() + 1);
-  }
+  // console.log(year);
 
-  // Get all the other Mondays in the month
-  while (d.getYear() === year) {
-    var pushDate = new Date(d.getTime());
-    mondays.push(
-      pushDate.getFullYear() +
-        "-" +
-        (pushDate.getMonth() + 1) +
-        "-" +
-        pushDate.getDate()
-    );
-    d.setDate(d.getDate() + 7);
-  }
+  // // Get the first Monday in the month
+  // while (d.getDay() !== 1) {
+  //   d.setDate(d.getDate() + 1);
+  // }
+
+  // // Get all the other Mondays in the month
+  // while (d.getYear() === year) {
+  //   var pushDate = new Date(d.getTime());
+  //   mondays.push(
+  //     pushDate.getFullYear() +
+  //       "-" +
+  //       (pushDate.getMonth() + 1) +
+  //       "-" +
+  //       pushDate.getDate()
+  //   );
+  //   d.setDate(d.getDate() + 7);
+  // }
+  // console.log(mondays);
+
+  var today = moment().format("YYYY-MM-DD");
+  mondays = today.weekdaysInMonth("Monday");
   console.log(mondays);
+  var schedule = {};
+  var data1 = [];
+  for (let i = 0; i < mondays.length; i++) {
+    schedule = {
+      eventName: "U4's",
+      calendar: "U4's",
+      color: "orange",
+      date: mondays[i],
+    };
+    data.push(schedule);
+  }
+  console.log(data);
+  // console.log(today);
 })();
