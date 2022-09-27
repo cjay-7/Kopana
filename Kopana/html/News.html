@@ -37,15 +37,21 @@
 
     <!-- CSS Code -->
     <style>
+      body {
+        overflow-x: hidden;
+      }
       .GeneratedMarquee {
         font-size: 2em;
-
         line-height: 1.3em;
         color: #000000;
         background-color: #f7b731;
-        padding: 0.5em;
-        margin: 20% 0 15%;
+        padding: 0.5em 13em;
+        margin: 20% 0 13%;
         transform: rotate(345deg);
+        width: 115%;
+
+        position: relative;
+        right: 35px;
       }
     </style>
 
@@ -53,7 +59,7 @@
     <marquee
       class="GeneratedMarquee"
       direction="right"
-      scrollamount="15"
+      scrollamount="10"
       behavior="scroll"
     >
       COMING SOON &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp COMING
