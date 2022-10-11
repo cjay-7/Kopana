@@ -55,9 +55,9 @@
       this.header.className = "header";
 
       this.title = createElement("h1");
-      this.title.addEventListener("click", function () {
-        self.curMonth();
-      });
+      // this.title.addEventListener("click", function () {
+      //   self.curMonth();
+      // });
 
       var right = createElement("div", "right");
       right.addEventListener("click", function () {
@@ -384,10 +384,10 @@
     this.next = false;
     this.draw();
   };
-  Calendar.prototype.curMonth = function () {
-    this.current = moment().date(1);
-    this.draw();
-  };
+  // Calendar.prototype.curMonth = function () {
+  //   this.current = moment().date(1);
+  //   this.draw();
+  // };
 
   window.Calendar = Calendar;
 

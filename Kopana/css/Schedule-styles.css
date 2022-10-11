@@ -31,6 +31,8 @@ body {
 }
 
 #calendar {
+  position: relative;
+  left: 10%;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -126,14 +128,14 @@ body {
 
 .week {
   background: #303137;
-  height: 20%;
+  height: 17%;
 }
 
 .day {
   display: inline-block;
-  width: 10%;
-  padding: 15px 10px;
-  margin: 0 19px;
+  width: 9%;
+  padding: 8px 10px;
+  margin: 0px 23px;
   text-align: center;
   vertical-align: top;
   cursor: pointer;
@@ -209,7 +211,8 @@ body {
 }
 
 .details {
-  position: relative;
+  position: absolute;
+  left: 5%;
   width: 20vw;
   height: 77vh;
   background: #0c8346;
@@ -526,11 +529,14 @@ body {
   #calendar {
     width: 100vw;
     border-radius: 0 0 15px 15px;
-    height: 52vh;
+    height: 60vh;
+    left: 0;
+    top: 7.4vh;
   }
   .calendar-container {
     margin: 24% auto 2%;
     flex-direction: column-reverse;
+    height: 80vh;
   }
 
   .header {
@@ -540,7 +546,7 @@ body {
     height: 54vh;
   }
   .week {
-    height: 16%;
+    height: 15%;
   }
 
   .entry {
@@ -552,11 +558,13 @@ body {
     margin: 10px 0;
   }
   .details {
-    position: relative;
     width: 100vw;
     height: 15vh;
     border-radius: 15px 15px 0 0;
     display: flex;
+    left: 0;
+    top: 15%;
+    justify-content: space-around;
   }
   .currentDay {
     padding: 0;
