@@ -120,7 +120,7 @@ button.white:hover {
   padding: 0 13% 1% 4%;
   line-height: 1.8;
   font-size: 22px;
-  color: #fafafa;
+  color: #dedede;
 }
 
 /* Exta Small devices (phones, 300px and down) */
@@ -233,7 +233,7 @@ button.white:hover {
 .centers-card {
   width: 30vw;
   border: 1px #fff solid;
-  border-radius: 13%;
+  border-radius: 50px;
   margin: 0 20px;
   background-color: #1c1f22;
   height: fit-content;
@@ -248,7 +248,7 @@ button.white:hover {
   display: block;
   margin: 0 auto;
   border: 1px;
-  border-radius: 55px 55px 0 0;
+  border-radius: 45px 45px 0 0;
   padding-top: 10px;
 }
 .centers-card-body {
@@ -268,14 +268,15 @@ button.white:hover {
   color: #cecece;
   font-size: 12px;
   line-height: 1.8;
+  cursor: pointer;
 }
 .centers-card-button {
   padding: 8px 12px;
-  margin: 1% 0 3% 1%;
+  margin: 3% 0 3% 1%;
 }
 .centers-card-button.white {
   padding: 8px 14px;
-  margin: 1% 0 3% 1%;
+  margin: 3% 0 3% 1%;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -327,9 +328,10 @@ button.white:hover {
     color: #cecece;
     font-size: 12px;
     line-height: 1.8;
+    cursor: pointer;
   }
   .centers-card-button {
-    margin: 1% 0 8% 0%;
+    margin: 3% 0 5% 0%;
   }
 }
 
@@ -350,10 +352,10 @@ button.white:hover {
     padding: 0 1%;
   }
   .centers-card-button {
-    margin: 1% 0 8% -1%;
+    margin: 3% 0 5% -1%;
   }
   .centers-card-button.white {
-    margin: 1% 0 8% 1%;
+    margin: 3% 0 5% 1%;
   }
 }
 
@@ -652,16 +654,17 @@ button.white:hover {
 }
 .partners-card-image .partners-card-img {
   height: 100%;
-  width: 240px;
+  width: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #1c1f22;
+  /* border: 4px solid #1c1f22; */
 }
 .name {
-  font-size: 1.1vw;
+  font-size: 0.9em;
   font-weight: 500;
   color: #e2e2e3;
   text-align: center;
+  margin: 0 10px;
 }
 .swiper-navBtn {
   color: #fff !important;

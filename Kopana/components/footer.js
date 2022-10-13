@@ -64,7 +64,7 @@ footerTemplate.innerHTML = `
           .footer-logo {
             display: block;
             cursor: pointer;
-            margin: 0 auto;
+            margin: 10px auto 0;
             width: 110px;
           }
           .footer-logo-container h3{
@@ -72,8 +72,17 @@ footerTemplate.innerHTML = `
             font-size: 13px;
             font-weight: 500;
             position: relative;
-            top: 25%;
+            top: 15%;
             text-align: center;
+          }
+          .footer-set-2 h3{
+            margin: 10px;
+          }
+          .footer-set-3 h3 {
+            margin-bottom:10px;
+          }
+          .footer-set-3 span:hover{
+            text-decoration: underline;
           }
           .footer-list {
             list-style: none;
@@ -90,7 +99,7 @@ footerTemplate.innerHTML = `
           .footer-head {
             color: #fff;
           }
-          .footer i {
+          footer i {
             color: #fafafa;
             padding: 0 10px;
           }        
@@ -122,7 +131,8 @@ footerTemplate.innerHTML = `
 
           
   </style>
-  <section class="footer">
+
+  <footer>
   <div class="footer-container">
     <div class="footer-logo-container">
       <img class="footer-logo" src="../images/KOPA.webp"></img>
@@ -156,19 +166,26 @@ footerTemplate.innerHTML = `
           <!--  <div class=footer-mobile-flexbox> -->
             <div class="footer-set-2 footer-link-container">
               <h3 class="footer-head">TESTIMONIAL</h3>
+              
               <h3 class="footer-head">BLOG</h3>
+              
               <h3 class="footer-head">CONTACT</h3>
             </div>
             <div class="footer-set-3 footer-link-container">
               <ul class="footer-list">
                 <li>
                   <h3 class="footer-head">CONTACT</h3>
-                  <a href="#">Tel: +91 22 26553333</a>
+              
+                  <a href="tel:+91 70457 08936">Gary D’Souza: <span>+91 70457 08936</span></a>
                   <br/>
-                  <a href="#">Mob: +91 9820533332</a>
+                  <a href="tel:+91 90290 48479">Baptist Fernandes: <span>+91 90290 48479</span></a>
+                  <br/>
+                  <a href="mailto:kopanafootball@gmail.com" target="_blank">Email: <span>kopanafootball@gmail.com</span></a>
                 </li>
                 <li>
-                  <p>404, T-Square, Chandivali Junction, Saki Naka,Andheri (E), Mumbai – 400050, India.</p>
+                  <p>VP Road, LIC Colony, Suresh Colony,
+                  Vile Parle West
+                  Mumbai 400056</p>
                 </li>
                 <li>
                   <i class="fa-brands fa-facebook"></i>
@@ -180,7 +197,7 @@ footerTemplate.innerHTML = `
             </div>
           <!-- </div> -->
   </div>
-</section>
+  </footer>
 `;
 
 class Footer extends HTMLElement {

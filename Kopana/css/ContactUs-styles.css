@@ -33,6 +33,8 @@ b {
   border-radius: 25px;
   padding: 3% 2%;
   background-color: #202125;
+  flex-direction: column;
+  justify-content: space-between;
   /* background-image: url(../Images/janosch-diggelmann-cfNYZJQVDRY-unsplash.jpeg); */
   /* background-image: url(../Images/nick-fewings-Twm0RDc-FvE-unsplash.jpeg); */
 }
@@ -40,15 +42,19 @@ b {
   font-size: 60px;
 }
 .info {
-  margin: 20% 8px 0;
+  margin: 0;
 }
 .info h3 {
   color: #fff;
-  padding: 2% 3%;
+  padding: 2% 0 2% 3%;
   text-decoration: none;
-  margin: 10px 8px 0;
+  margin: 10px 0 0 8px;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 19px;
+}
+.info h3 a {
+  text-decoration: none;
+  color: #fff;
 }
 /* .info h3:nth-child(2n) {
   margin: 40px 8px 0;
@@ -57,11 +63,9 @@ b {
   margin-right: 3%;
 }
 .socials {
-  position: absolute;
-  bottom: 90px;
-  left: 110px;
   color: #fff;
   font-size: 24px;
+  margin: 0 4%;
 }
 .socials i {
   margin-right: 2em;
@@ -118,7 +122,8 @@ b {
   margin-left: 0;
 }
 
-.group > input:focus {
+.group > input:focus,
+.iti--allow-dropdown input[type="tel"]:focus {
   border-color: #0c8346;
 }
 .radio-container {
@@ -175,7 +180,20 @@ input[type="radio"]:checked + .lbl-radio > .marker {
 }
 
 input[type="radio"] {
-  display: none;
+  display: inline;
+  visibility: visible;
+  opacity: 0;
+  position: absolute;
+}
+input[type="radio"]:focus + .lbl-radio > .marker {
+  /* content: "";
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  margin-right: 5px;
+  background: transparent;
+  vertical-align: text-top; */
+  border: 4px solid #0c8346;
 }
 
 /* input {

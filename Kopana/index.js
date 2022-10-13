@@ -101,3 +101,9 @@ var swiper = new Swiper(".slide-content", {
     },
   },
 });
+
+function sendMail() {
+  var link = "mailto:kopanafootball@gmail.com"  ;
+  
+  window.location.href = link;
+}
