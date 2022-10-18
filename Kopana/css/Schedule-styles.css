@@ -23,10 +23,20 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
+
+button {
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+}
+
 .calendar-container {
   display: flex;
   flex-direction: row-reverse;
-  margin: 11% auto 2%;
+  margin: 10.5% auto 2%;
   justify-content: center;
 }
 
@@ -37,7 +47,7 @@ body {
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   width: 70vw;
-  height: 77vh;
+  height: 80vh;
   overflow: hidden;
   border-radius: 0 15px 15px 0;
   background-color: rgb(48 49 55);
@@ -50,7 +60,7 @@ body {
   text-align: center;
   position: relative;
   z-index: 100;
-  top: 30px;
+  top: 60px;
 }
 
 .header h1 {
@@ -89,7 +99,7 @@ body {
   opacity: 0;
   height: 65vh;
   position: relative;
-  top: 30px;
+  top: 60px;
 }
 
 .month.new {
@@ -198,7 +208,7 @@ body {
 }
 
 .blue {
-  background: rgba(156, 202, 235, 1);
+  background: rgb(43, 148, 223);
 }
 .orange {
   background: rgba(247, 167, 0, 1);
@@ -209,12 +219,33 @@ body {
 .yellow {
   background: rgba(249, 233, 0, 1);
 }
+.red {
+  background: rgb(222, 78, 78);
+}
+.white {
+  background: rgb(255, 255, 255);
+}
+.baby-blue {
+  background: rgb(15, 203, 255);
+}
+.lavender {
+  background-color: rgb(147, 147, 228);
+}
+.grey {
+  background: rgb(161, 161, 161);
+}
+.pink {
+  background: palevioletred;
+}
 
 .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   position: absolute;
   left: 5%;
   width: 20vw;
-  height: 77vh;
+  height: 80vh;
   background: #0c8346;
   border-radius: 15px 0 0 15px;
   -webkit-animation: moveToLeftFade 0.5s ease both;
@@ -284,7 +315,7 @@ body {
   font-size: 13px;
   line-height: 22px;
   letter-spacing: 0.5px;
-  padding: 2px 24px;
+  padding: 2px 0 2px 24px;
   vertical-align: top;
   text-align: justify;
 }
@@ -305,10 +336,30 @@ body {
   display: inline-block;
   padding: 0 0 0 7px;
 }
-
+.bookingButtonContainer {
+  /* position: absolute;
+  bottom: 0;
+  right: 50%; */
+  margin: 10% 0;
+  align-self: center;
+}
+.booking-button-open {
+  cursor: pointer;
+}
+.booking-button-close {
+  background-image: url(../Images/close.png);
+  color: #000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5% 2%;
+}
 .legend {
   width: 100%;
-  height: 4.5vh;
+  height: 8.5vh;
   background: rgb(38 39 44 / 75%);
   line-height: 30px;
   position: absolute;
@@ -338,7 +389,7 @@ body {
 }
 
 .entry.blue:after {
-  background: rgba(156, 202, 235, 1);
+  background: rgb(43, 148, 223);
 }
 .entry.orange:after {
   background: rgba(247, 167, 0, 1);
@@ -349,7 +400,172 @@ body {
 .entry.yellow:after {
   background: rgba(249, 233, 0, 1);
 }
+.entry.red:after {
+  background: rgb(222, 78, 78);
+}
+.entry.white:after {
+  background: rgb(255, 255, 255);
+}
+.entry.baby-blue:after {
+  background: rgb(15, 203, 255);
+}
+.entry.lavender:after {
+  background-color: rgb(147, 147, 228);
+}
+.entry.grey:after {
+  background: rgb(161, 161, 161);
+}
+.entry.pink:after {
+  background: palevioletred;
+}
+.modal {
+  padding: 1em;
+  max-width: 50ch;
+  border: 0;
+  box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+  margin: auto;
+  background-color: #131416;
+}
 
+.modal::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
+
+form {
+  display: grid;
+  gap: 1em;
+}
+.group {
+  position: relative;
+  display: inline-block;
+  margin: 2em 0 0;
+}
+/* .group:nth-child(2n) {
+  position: relative;
+  display: inline-block;
+  margin: 2em 0 0 1em;
+}
+.group:nth-child(3n) {
+  margin: 2em 0 0;
+} */
+.group > label {
+  padding: 0 0.2em;
+  position: absolute;
+  top: -0.7em;
+  left: 1em;
+  background-color: #131416;
+  color: white;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.group > input,
+.iti--allow-dropdown input[type="tel"] {
+  padding: 0.8em;
+  width: 23.7vw;
+  height: 4em;
+  border-radius: 0.5em;
+  border: 2px solid white;
+  outline: none;
+  background: transparent;
+  color: #fff;
+}
+.iti--allow-dropdown input[type="tel"] {
+  padding-right: 6px;
+  padding-left: 52px;
+  margin-left: 0;
+}
+
+.group > input:focus,
+.iti--allow-dropdown input[type="tel"]:focus {
+  border-color: #0c8346;
+}
+.radio-container {
+  display: flex;
+  gap: 1em;
+  padding: 1em 0;
+  color: #fff;
+}
+form h4 {
+  color: #fff;
+  margin-top: 1em;
+}
+.lbl-radio {
+  border: 2px solid #fff;
+  height: 3.3em;
+  border-radius: 0.5em;
+  padding: 0em;
+  display: flex;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+}
+.lbl-radio-small {
+  width: 6rem;
+}
+.lbl-radio-big {
+  width: 12rem;
+}
+
+.lbl-radio .content .title {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.lbl-radio .content .subtext {
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.marker {
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  margin: 0 5px 0 10px;
+}
+
+input[type="radio"]:checked + .lbl-radio {
+  border-color: #0c8346;
+}
+
+input[type="radio"]:checked + .lbl-radio > .marker {
+  border: 4px solid #0c8346;
+}
+
+input[type="radio"] {
+  display: inline;
+  visibility: visible;
+  opacity: 0;
+  position: absolute;
+}
+input[type="radio"]:focus + .lbl-radio > .marker {
+  border: 4px solid #0c8346;
+}
+
+#submit {
+  float: right;
+  margin-top: 1.2em;
+  margin-right: 0.8em;
+  background-color: #0c8346;
+  color: #fff;
+  width: 10rem;
+  height: 3.3em;
+  border-radius: 0.5em;
+  border: 2px solid #0c8346;
+  text-align: center;
+  font-size: 16px;
+}
+
+.alert-info {
+  color: #0c8346;
+  font-size: 14px;
+}
+
+.alert-error {
+  color: #a94442;
+  font-size: 14px;
+}
 /* Animations are cool!  */
 @-webkit-keyframes moveFromTopFade {
   from {
@@ -529,7 +745,7 @@ body {
   #calendar {
     width: 100vw;
     border-radius: 0 0 15px 15px;
-    height: 60vh;
+    height: 67vh;
     left: 0;
     top: 7.4vh;
   }
@@ -538,12 +754,17 @@ body {
     flex-direction: column-reverse;
     height: 80vh;
   }
-
+  .legend {
+    padding-top: 5px;
+    height: 10.5vh;
+  }
   .header {
     width: 100vw;
+    top: 90px;
   }
   .month {
-    height: 54vh;
+    height: 55vh;
+    top: 85px;
   }
   .week {
     height: 15%;
@@ -561,10 +782,17 @@ body {
     width: 100vw;
     height: 15vh;
     border-radius: 15px 15px 0 0;
-    display: flex;
+
     left: 0;
-    top: 15%;
+    top: 12%;
     justify-content: space-around;
+    overflow-y: scroll;
+  }
+  .events {
+    margin: auto 0;
+  }
+  .event {
+    padding: 2px 0px;
   }
   .currentDay {
     padding: 0;
@@ -578,5 +806,27 @@ body {
   .currentDayName,
   .currentDayMonth {
     font-size: 24px;
+  }
+  ::-webkit-scrollbar {
+    width: 12px;
+    position: absolute;
+    left: 30px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8);*/
+    -webkit-border-radius: 10px;
+    background-color: #0c8346;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   }
 }

@@ -611,17 +611,24 @@ hr {
 
 /* ----founders ----*/
 
-.founders {
+.team {
   width: 100%;
 }
+.founders-container {
+  display: flex;
+  justify-content: space-between;
+}
 
-.founders .swiper {
+.team .swiper {
   margin: 2% 0;
-  width: 100%;
-  height: 100%;
+  width: 30vw;
+  height: 60vh;
   background: #000;
   --swiper-navigation-color: #fff;
   --swiper-pagination-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  margin-inline-end: 5%;
 }
 
 .myFoundersSwiper .swiper-slide {
@@ -672,35 +679,38 @@ hr {
   padding: 1% 2%;
 }
 .slide-text-wrapper {
-  margin: 1% 12%;
   border: 1px;
   border-radius: 50px;
   background-color: rgba(0, 0, 0, 0.4);
   line-height: 1.4;
-  width: 35%;
-  padding: 3% 2%;
 }
 
 /* from here */
 
-.founders {
+.team {
   position: relative;
   width: 100%;
 }
 
-.founders-head {
+.team-head {
   font-size: 60px;
   background-color: #e2e2e3;
   color: #000;
   line-height: 1.6;
   text-align: center;
 }
+.founders-head {
+  width: 30%;
+  font-size: 40px;
+  color: #fff;
+  margin: auto 0;
+}
 
 .founders-head-wrapper {
   position: relative;
-  top: 45px;
-  left: 135px;
-  padding: 4% 0;
+  top: 160px;
+  right: 60px;
+  padding: 4% 0px;
   width: 40%;
 }
 
@@ -718,7 +728,7 @@ hr {
 .founders-fn {
   color: #fff;
   padding: 0;
-  font-size: 70px;
+  font-size: 45px;
   font-weight: 900;
   letter-spacing: 7px;
   z-index: 1;
@@ -739,15 +749,19 @@ hr {
 .founders-ln {
   color: #000;
   padding: 0;
-  font-size: 70px;
+  font-size: 45px;
   font-weight: 900;
   letter-spacing: 7px;
   z-index: 2;
   position: relative;
-  bottom: 20px;
+  bottom: 13px;
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0 !important;
 }
 @media only screen and (max-width: 600px) {
-  .founders .swiper {
+  .team .swiper {
     height: 65vh;
   }
   .myFoundersSwiper .swiper-slide {

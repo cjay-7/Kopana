@@ -50,6 +50,7 @@ headerTemplate.innerHTML = `
         .head-logo {
         width: 7%;
         transition: 0.6s;
+        cursor: pointer;
         }
         .head-mobile-toggle{
           display:none;

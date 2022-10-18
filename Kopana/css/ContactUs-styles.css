@@ -131,6 +131,7 @@ b {
   gap: 1em;
   padding: 1em 0;
   color: #fff;
+  flex-wrap: wrap;
 }
 form h4 {
   color: #fff;
@@ -186,36 +187,9 @@ input[type="radio"] {
   position: absolute;
 }
 input[type="radio"]:focus + .lbl-radio > .marker {
-  /* content: "";
-  display: inline-block;
-  height: 14px;
-  width: 14px;
-  margin-right: 5px;
-  background: transparent;
-  vertical-align: text-top; */
   border: 4px solid #0c8346;
 }
 
-/* input {
-  border: 0 0 1px 0;
-  padding: 7px 15px;
-  background-color: transparent;
-  color: #ffffff;
-
-  transition: 0.6s;
-
-  margin: 10px 10px 10px 5px;
-} */
-/* input#lname {
-  padding: 7px 20px 7px 15px;
-}
-input#email {
-  width: 35%;
-}
-input#code {
-  width: 10%;
-  margin-right: 0;
-} */
 #submit {
   float: right;
   margin-top: 1.2em;

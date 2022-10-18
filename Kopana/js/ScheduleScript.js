@@ -14,7 +14,9 @@
       var self = this;
       window.setTimeout(function () {
         self.openDay(current);
-      }, 500);
+        self.drawMonth(current);
+        self.drawLegend(current);
+      }, 1000);
     }
   }
 
@@ -218,33 +220,6 @@
     }
     return classes.join(" ");
   };
-  // Calendar.prototype.closeDay = function (el) {
-  //   // var details, arrow;
-  //   // var dayNumber = +el.querySelectorAll(".day-number")[0].innerText || +el.querySelectorAll(".day-number")[0].textContent;
-  //   // var day = this.current.clone().date(dayNumber);
-  //   var daysActive = document.querySelectorAll(".day.active");
-
-  //   [].forEach.call(daysActive, function (i) {
-  //     i.classList.remove("active");
-  //   });
-  //   var currentOpened = document.querySelector(".details");
-
-  //   if (currentOpened) {
-  //     currentOpened.addEventListener("webkitAnimationEnd", function () {
-  //       currentOpened.parentNode.removeChild(currentOpened);
-  //     });
-  //     currentOpened.addEventListener("oanimationend", function () {
-  //       currentOpened.parentNode.removeChild(currentOpened);
-  //     });
-  //     currentOpened.addEventListener("msAnimationEnd", function () {
-  //       currentOpened.parentNode.removeChild(currentOpened);
-  //     });
-  //     currentOpened.addEventListener("animationend", function () {
-  //       currentOpened.parentNode.removeChild(currentOpened);
-  //     });
-  //     currentOpened.className = "details out";
-  //   }
-  // };
 
   Calendar.prototype.openDay = function (el) {
     var details;
@@ -267,10 +242,6 @@
     currentDay.appendChild(currentDayName);
     currentDay.appendChild(currentDayNumber);
     currentDay.appendChild(currentDayMonth);
-    // [].forEach.call(daysActive, function (i) {
-    //   i.classList.remove("active");
-    // });
-    // el.classList.add("active");
 
     var currentOpened = document.querySelector(".details");
 
@@ -302,16 +273,9 @@
       //Create the event wrapper
       var calendarContainer = document.querySelector(".calendar-container");
 
-      // var screenwidth = window.screen.width;
-
-      // console.log(screenwidth);
-      // if (screenwidth > 425) {
-      calendarContainer.appendChild(details);
       details.appendChild(currentDay);
-      // } else if (screenwidth < 425) {
-      //   el.parentNode.appendChild(details);
-      //   details.appendChild(currentDay);
-      // }
+
+      calendarContainer.appendChild(details);
     }
 
     var todaysEvents = this.events.reduce(function (memo, ev) {
@@ -322,6 +286,77 @@
     }, []);
 
     this.renderEvents(todaysEvents, details);
+
+    var bookingButtonContainer = createElement("div", "bookingButtonContainer");
+    var bookingButtonOpen = createElement("button", "booking-button-open");
+    var bookingButtonClose = createElement("button", "booking-button-close");
+    // var xmark = createElement("i", "fa-solid fa-xmark");
+    var bookingModal = createElement("dialog", "modal");
+    var bookingForm = createElement("form", "booking-form");
+    var group1 = createElement("div", "group");
+    var group2 = createElement("div", "group");
+    var group3 = createElement("div", "radio-container");
+
+    bookingButtonOpen.innerHTML = "Book Session";
+    // bookingButtonOpen.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+
+    bookingButtonClose.setAttribute("type", "button");
+    bookingModal.setAttribute("id", "modal");
+    bookingForm.setAttribute("method", "dialog");
+
+    var labelName = createElement("label");
+    labelName.setAttribute("for", "name");
+    labelName.innerHTML = "Name : ";
+    var labelPhone = createElement("label");
+    labelPhone.setAttribute("for", "phone");
+    labelPhone.innerHTML = "Phone Number : ";
+    var labelCategory = createElement("label");
+    labelCategory.setAttribute("for", "name");
+    labelCategory.innerHTML = "Category : ";
+
+    var inputName = createElement("input");
+    inputName.setAttribute("type", "text");
+    inputName.setAttribute("name", "name");
+    inputName.setAttribute("id", "name");
+    inputName.setAttribute("placeholder", "John Doe");
+
+    var inputPhone = createElement("input");
+    inputPhone.setAttribute("type", "tel");
+    inputPhone.setAttribute("name", "phone");
+    inputPhone.setAttribute("id", "text");
+    inputPhone.setAttribute("placeholder", "9999999999");
+
+    var inputCategory = createElement("input");
+    inputCategory.setAttribute("type", "radio");
+    inputCategory.setAttribute("name", "category");
+    inputCategory.setAttribute("id", "category1");
+
+    group1.appendChild(labelName);
+    group1.appendChild(inputName);
+    bookingForm.appendChild(group1);
+
+    // group.innerHTML = "";
+
+    group2.appendChild(labelPhone);
+    group2.appendChild(inputPhone);
+    bookingForm.appendChild(group2);
+
+    group3.appendChild(labelCategory);
+    group3.appendChild(inputCategory);
+
+    bookingForm.appendChild(group3);
+    
+    bookingButtonContainer.appendChild(bookingButtonOpen);
+    details.appendChild(bookingButtonContainer);
+    details.appendChild(bookingModal);
+    bookingModal.appendChild(bookingButtonClose);
+    bookingModal.appendChild(bookingForm);
+    bookingButtonOpen.addEventListener("click", () => {
+      bookingModal.showModal();
+    });
+    bookingButtonClose.addEventListener("click", () => {
+      bookingModal.close();
+    });
   };
 
   Calendar.prototype.renderEvents = function (events, ele) {
@@ -384,10 +419,6 @@
     this.next = false;
     this.draw();
   };
-  // Calendar.prototype.curMonth = function () {
-  //   this.current = moment().date(1);
-  //   this.draw();
-  // };
 
   window.Calendar = Calendar;
 
@@ -404,76 +435,435 @@
 })();
 
 !(function () {
-  var data = [
-    {
-      eventName: "U4's",
-      calendar: "U4's",
-      color: "orange",
-      date: "2022-03-08",
-    },
-    {
-      eventName: "U6's",
-      calendar: "U6's",
-      color: "blue",
-      date: "2022-09-28",
-    },
-    {
-      eventName: "U8's / U10's / U12's",
-      calendar: "U8's / U10's / U12's",
-      color: "yellow",
-      date: "2022-09-20",
-    },
-    {
-      eventName: "U14's / U16's / U18's",
-      calendar: "U14's / U16's / U18's",
-      color: "green",
-      date: "2022-03-17",
-    },
-  ];
+  var data = [];
 
   var calendar = new Calendar("#calendar", data);
 
-  // var d = new Date(),
-  //   year = d.getYear(),
-  //   mondays = [];
+  var d = new Date(),
+    year = d.getYear(),
+    mondays = [],
+    tuesdays = [],
+    wednesdays = [],
+    thursdays = [],
+    fridays = [],
+    saturdays = [],
+    sundays = [];
+  schedule = [];
 
-  // d.setDate(1);
+  // mondays
+  d.setDate(1);
 
-  // console.log(year);
+  // Get the first Monday in the month
+  while (d.getDay() !== 1) {
+    d.setDate(d.getDate() + 1);
+  }
 
-  // // Get the first Monday in the month
-  // while (d.getDay() !== 1) {
-  //   d.setDate(d.getDate() + 1);
-  // }
-
-  // // Get all the other Mondays in the month
-  // while (d.getYear() === year) {
-  //   var pushDate = new Date(d.getTime());
-  //   mondays.push(
-  //     pushDate.getFullYear() +
-  //       "-" +
-  //       (pushDate.getMonth() + 1) +
-  //       "-" +
-  //       pushDate.getDate()
-  //   );
-  //   d.setDate(d.getDate() + 7);
-  // }
-  // console.log(mondays);
-
-  var today = moment().format("YYYY-MM-DD");
-  mondays = today.weekdaysInMonth("Monday");
-  console.log(mondays);
-  var schedule = {};
-  var data1 = [];
+  // Get all the other Mondays in the month
+  while (d.getYear() === year) {
+    var pushDate = new Date(d.getTime());
+    mondays.push(
+      pushDate.getFullYear() +
+        "-" +
+        (pushDate.getMonth() + 1) +
+        "-" +
+        pushDate.getDate()
+    );
+    d.setDate(d.getDate() + 7);
+  }
   for (let i = 0; i < mondays.length; i++) {
     schedule = {
-      eventName: "U4's",
-      calendar: "U4's",
+      eventName: "U6's : 5-6 PM.",
+      calendar: "U6's",
       color: "orange",
-      date: mondays[i],
+      date: moment(mondays[i]),
     };
     data.push(schedule);
   }
-  console.log(data);
-  // console.log(today);
+
+  // tuesdays
+
+  d = new Date();
+
+  d.setDate(1);
+
+  // Get the first tuesday in the month
+  while (d.getDay() !== 2) {
+    d.setDate(d.getDate() + 1);
+  }
+
+  // Get all the other tuesdays in the month
+  while (d.getYear() === year) {
+    var pushDate = new Date(d.getTime());
+    tuesdays.push(
+      pushDate.getFullYear() +
+        "-" +
+        (pushDate.getMonth() + 1) +
+        "-" +
+        pushDate.getDate()
+    );
+    d.setDate(d.getDate() + 7);
+  }
+  for (let i = 0; i < tuesdays.length; i++) {
+    schedule = {
+      eventName: "U6's : 5-6 PM.",
+      calendar: "U6's",
+      color: "orange",
+      date: moment(tuesdays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "U8's : 6-7:30 PM.",
+      calendar: "U8's",
+      color: "blue",
+      date: moment(tuesdays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "U10's : 6-7:30 PM.",
+      calendar: "U10's",
+      color: "red",
+      date: moment(tuesdays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "U12's : 6-7:30 PM",
+      calendar: "U12's",
+      color: "green",
+      date: moment(tuesdays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "U14's : 6-7:30 PM.",
+      calendar: "U14's",
+      color: "yellow",
+      date: moment(tuesdays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "Women's Team : 7:30 - 9 PM.",
+      calendar: "Women's Team",
+      color: "lavender",
+      date: moment(tuesdays[i]),
+    };
+    data.push(schedule);
+  }
+
+  // wednesdays
+
+  d = new Date();
+  d.setDate(1);
+
+  // Get the first wednesday in the month
+  while (d.getDay() !== 3) {
+    d.setDate(d.getDate() + 1);
+  }
+  // Get all the other wednesday in the month
+  while (d.getYear() === year) {
+    var pushDate = new Date(d.getTime());
+    wednesdays.push(
+      pushDate.getFullYear() +
+        "-" +
+        (pushDate.getMonth() + 1) +
+        "-" +
+        pushDate.getDate()
+    );
+    d.setDate(d.getDate() + 7);
+  }
+  for (let i = 0; i < wednesdays.length; i++) {
+    schedule = {
+      eventName: "U6's : 5-6 PM.",
+      calendar: "U6's",
+      color: "orange",
+      date: moment(wednesdays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "U8's : 6-7:30 PM.",
+      calendar: "U8's",
+      color: "blue",
+      date: moment(wednesdays[i]),
+    };
+    data.push(schedule);
+  }
+
+  // thursdays
+
+  d = new Date();
+  d.setDate(1);
+
+  // Get the first thursday in the month
+  while (d.getDay() !== 4) {
+    d.setDate(d.getDate() + 1);
+  }
+
+  // Get all the other thursdays in the month
+  while (d.getYear() === year) {
+    var pushDate = new Date(d.getTime());
+    thursdays.push(
+      pushDate.getFullYear() +
+        "-" +
+        (pushDate.getMonth() + 1) +
+        "-" +
+        pushDate.getDate()
+    );
+    d.setDate(d.getDate() + 7);
+  }
+  for (let i = 0; i < thursdays.length; i++) {
+    schedule = {
+      eventName: "U6's : 5-6 PM.",
+      calendar: "U6's",
+      color: "orange",
+      date: moment(thursdays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "U8's : 6-7:30 PM.",
+      calendar: "U8's",
+      color: "blue",
+      date: moment(thursdays[i]),
+    };
+    data.push(schedule);
+    schedule = {
+      eventName: "U10's : 6-7:30 PM.",
+      calendar: "U10's",
+      color: "red",
+      date: moment(thursdays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "U12's : 6-7:30 PM.",
+      calendar: "U12's",
+      color: "green",
+      date: moment(thursdays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "U14's : 6-7:30 PM.",
+      calendar: "U14's",
+      color: "yellow",
+      date: moment(thursdays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "Women's Team : 7:30 - 9 PM.",
+      calendar: "Women's Team",
+      color: "lavender",
+      date: moment(thursdays[i]),
+    };
+    data.push(schedule);
+  }
+
+  // fridays
+
+  d = new Date();
+  d.setDate(1);
+
+  // Get the first friday in the month
+  while (d.getDay() !== 5) {
+    d.setDate(d.getDate() + 1);
+  }
+
+  // Get all the other friday in the month
+  while (d.getYear() === year) {
+    var pushDate = new Date(d.getTime());
+    fridays.push(
+      pushDate.getFullYear() +
+        "-" +
+        (pushDate.getMonth() + 1) +
+        "-" +
+        pushDate.getDate()
+    );
+    d.setDate(d.getDate() + 7);
+  }
+  for (let i = 0; i < fridays.length; i++) {
+    schedule = {
+      eventName: "U6's : 5-6 PM.",
+      calendar: "U6's",
+      color: "orange",
+      date: moment(fridays[i]),
+    };
+    data.push(schedule);
+    schedule = {
+      eventName: "U8's : 6-7:30 PM.",
+      calendar: "U8's",
+      color: "blue",
+      date: moment(fridays[i]),
+    };
+    data.push(schedule);
+    schedule = {
+      eventName: "U10's : 6-7:30 PM.",
+      calendar: "U10's",
+      color: "red",
+      date: moment(fridays[i]),
+    };
+    data.push(schedule);
+  }
+
+  // saturdays
+  d = new Date();
+  d.setDate(1);
+
+  // Get the first saturday in the month
+  while (d.getDay() !== 6) {
+    d.setDate(d.getDate() + 1);
+  }
+
+  // Get all the other saturdays in the month
+  while (d.getYear() === year) {
+    var pushDate = new Date(d.getTime());
+    saturdays.push(
+      pushDate.getFullYear() +
+        "-" +
+        (pushDate.getMonth() + 1) +
+        "-" +
+        pushDate.getDate()
+    );
+    d.setDate(d.getDate() + 7);
+  }
+  for (let i = 0; i < saturdays.length; i++) {
+    schedule = {
+      eventName: "U10's : 5-6:30 PM.",
+      calendar: "U10's",
+      color: "red",
+      date: moment(saturdays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "U12's : 5-6:30 PM.",
+      calendar: "U12's",
+      color: "green",
+      date: moment(saturdays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "U14's : 5-6:30 PM.",
+      calendar: "U14's",
+      color: "yellow",
+      date: moment(saturdays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "U18's : 5-6:30 PM.",
+      calendar: "U18's",
+      color: "white",
+      date: moment(saturdays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "Youth Team : 6-8 AM.",
+      calendar: "Youth Team",
+      color: "baby-blue",
+      date: moment(saturdays[i]),
+    };
+    data.push(schedule);
+  }
+
+  // sundays
+  d = new Date();
+  d.setDate(1);
+
+  // Get the first sunday in the month
+  while (d.getDay() !== 0) {
+    d.setDate(d.getDate() + 1);
+  }
+
+  // Get all the other sunday in the month
+  while (d.getYear() === year) {
+    var pushDate = new Date(d.getTime());
+    sundays.push(
+      pushDate.getFullYear() +
+        "-" +
+        (pushDate.getMonth() + 1) +
+        "-" +
+        pushDate.getDate()
+    );
+    d.setDate(d.getDate() + 7);
+  }
+  for (let i = 0; i < sundays.length; i++) {
+    schedule = {
+      eventName: "U10's : 5-6:30 PM.",
+      calendar: "U10's",
+      color: "red",
+      date: moment(sundays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "U12's : 5-6:30 PM.",
+      calendar: "U12's",
+      color: "green",
+      date: moment(sundays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "U14's : 5-6:30 PM.",
+      calendar: "U14's",
+      color: "yellow",
+      date: moment(sundays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "U18's : 5-6:30 PM.",
+      calendar: "U18's",
+      color: "white",
+      date: moment(sundays[i]),
+    };
+    data.push(schedule);
+
+    schedule = {
+      eventName: "Youth Team : 6-8 AM.",
+      calendar: "Youth Team",
+      color: "baby-blue",
+      date: moment(sundays[i]),
+    };
+    data.push(schedule);
+  }
+
+  schedule = {
+    eventName: "MFA Youth League U11 : 8 AM.",
+    calendar: "MFA Youth League U11",
+    color: "grey",
+    date: moment("2022-10-15"),
+  };
+  data.push(schedule);
+
+  schedule = {
+    eventName: "MFA Youth League U11 : 11 AM.",
+    calendar: "MFA Youth League U11",
+    color: "grey",
+    date: moment("2022-10-22"),
+  };
+  data.push(schedule);
+
+  schedule = {
+    eventName: "MFA Second Division : 9 AM.",
+    calendar: "MFA Second Division",
+    color: "pink",
+    date: moment("2022-11-06"),
+  };
+  data.push(schedule);
+
+  schedule = {
+    eventName: "MFA Second Division : 12 PM.",
+    calendar: "MFA Second Division",
+    color: "pink",
+    date: moment("2022-11-11"),
+  };
+  data.push(schedule);
 })();
