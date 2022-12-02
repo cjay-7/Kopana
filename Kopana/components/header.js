@@ -81,7 +81,9 @@ headerTemplate.innerHTML = `
         .sticky .head-logo {
         color: #fff;
         }
+
         /* Extra small devices (phones, 600px and down) */
+
         @media only screen and (max-width: 600px) {
           header {
             position: fixed;
@@ -164,33 +166,7 @@ headerTemplate.innerHTML = `
 
         }
         
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .example {
-    background: green;
-  }
-}
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .example {
-    background: blue;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .example {
-    background: orange;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .example {
-    background: pink;
-  }
-}
 
   </style>
   <header>
@@ -218,6 +194,7 @@ class Header extends HTMLElement {
     shadowRoot.appendChild(headerTemplate.content);
 
     // Header Scroll Sticky
+
     window.addEventListener("scroll", function () {
       var header = shadowRoot.querySelector("header");
       header.classList.toggle("sticky", window.scrollY > 0);
@@ -239,6 +216,7 @@ class Header extends HTMLElement {
       }
     });
 
+    //Close nav on scrolling
     (function () {
       var previousScroll = 0;
 
