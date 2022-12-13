@@ -132,7 +132,7 @@ button.white:hover {
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .banner {
-    background: url(../images/_DSC5512.jpg);
+    background: url(../Images/_DSC5512.jpg);
     background-size: cover;
     background-position-x: center;
     overflow-x: hidden;

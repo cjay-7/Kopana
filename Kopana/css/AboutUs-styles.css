@@ -18,7 +18,7 @@ b {
 .story {
   position: relative;
   width: 100%;
-  background: url(../images/_DSC7944-copy.jpg);
+  background: url(../Images/_DSC7944-copy.jpg);
   background-size: cover;
   display: flex;
   justify-content: space-evenly;
@@ -648,7 +648,7 @@ hr {
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
-  background-image: url(../images/gary.webp);
+  background-image: url(../Images/gary.webp);
 }
 .parallax-bg-2 {
   position: absolute;
@@ -659,7 +659,7 @@ hr {
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
-  background-image: url(../images/baps.jpg);
+  background-image: url(../Images/baps.jpg);
 }
 
 .Founders-title {

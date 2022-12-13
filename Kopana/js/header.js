@@ -170,7 +170,7 @@ headerTemplate.innerHTML = `
 
   </style>
   <header>
-    <img class="head-logo" src="../images/KOPA.webp" alt="logo" onclick="location.href='../index.html'"/>
+    <img class="head-logo" src="../Images/KOPA.webp" alt="logo" onclick="location.href='../index.html'"/>
     <button class="head-mobile-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" ><i class="fa-solid fa-bars"></i></button>
       <ul id="primary-nav" class="head-list" data-visible="false" >
         <li><a href="../index.html">Home</a></li>

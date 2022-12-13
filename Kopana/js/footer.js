@@ -135,7 +135,7 @@ footerTemplate.innerHTML = `
   <footer>
   <div class="footer-container">
     <div class="footer-logo-container">
-      <img class="footer-logo" src="../images/KOPA.webp"></img>
+      <img class="footer-logo" src="../Images/KOPA.webp"></img>
       <h3>Made with <span class="fa-solid fa-heart"></span> by Jay
       </h3>
     </div>
