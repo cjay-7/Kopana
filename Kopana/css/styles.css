@@ -489,7 +489,8 @@ button.white:hover {
   border-radius: 50%;
 }
 
-.testimonial .cont div h2 {
+.testimonial .cont div h2,
+.testimonial .cont div h3 {
   color: #e2e2e3;
   font-size: 1em;
   margin: 15px 0;
