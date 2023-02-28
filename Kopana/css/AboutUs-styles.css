@@ -761,14 +761,18 @@ hr {
   opacity: 0 !important;
 }
 @media only screen and (max-width: 600px) {
+  .founders-container {
+    flex-direction: column;
+    margin: 0 5%;
+  }
   .team .swiper {
-    height: 65vh;
+    width: 90vw;
   }
   .myFoundersSwiper .swiper-slide {
     padding: 0;
   }
   .founders-head {
-    font-size: 56px;
+    font-size: 42px;
     line-height: 1;
   }
   .parallax-bg-2 {

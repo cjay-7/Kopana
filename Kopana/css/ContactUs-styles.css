@@ -132,6 +132,8 @@ b {
   padding: 1em 0;
   color: #fff;
   flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 3%;
 }
 form h4 {
   color: #fff;
@@ -140,18 +142,13 @@ form h4 {
 .lbl-radio {
   border: 2px solid #fff;
   height: 3.3em;
+  width: 8rem;
   border-radius: 0.5em;
   padding: 0em;
   display: flex;
   position: relative;
   align-items: center;
   cursor: pointer;
-}
-.lbl-radio-small {
-  width: 6rem;
-}
-.lbl-radio-big {
-  width: 12rem;
 }
 
 .lbl-radio .content .title {
@@ -244,6 +241,7 @@ input[type="radio"]:focus + .lbl-radio > .marker {
   .radio-container {
     flex-wrap: wrap;
     margin-left: 1em;
+    margin-right: 2em;
   }
   .lbl-radio-small {
     width: 9rem;
