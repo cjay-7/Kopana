@@ -9,7 +9,7 @@ var testimonial = document.getElementById("testimonial"),
   ),
   testimonialLeftArrow = document.getElementById("left-arrow"),
   testimonialRightArrow = document.getElementById("right-arrow"),
-  testimonialSpeed = 4500,
+  testimonialSpeed = 10000,
   currentSlide = 0,
   currentActive = 0,
   testimonialTimer,
@@ -103,7 +103,7 @@ var swiper = new Swiper(".slide-content", {
 });
 
 function sendMail() {
-  var link = "mailto:kopanafootball@gmail.com"  ;
-  
+  var link = "mailto:kopanafootball@gmail.com";
+
   window.location.href = link;
 }
