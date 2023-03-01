@@ -296,6 +296,7 @@
     var group1 = createElement("div", "group");
     var group2 = createElement("div", "group");
     var group3 = createElement("div", "radio-container");
+    var group4 = createElement("div", "group");
 
     bookingButtonOpen.innerHTML = "Book Session";
     // bookingButtonOpen.innerHTML = '<i class="fa-solid fa-xmark"></i>';
@@ -307,12 +308,13 @@
     var labelName = createElement("label");
     labelName.setAttribute("for", "name");
     labelName.innerHTML = "Name : ";
+
     var labelPhone = createElement("label");
     labelPhone.setAttribute("for", "phone");
-    labelPhone.innerHTML = "Phone Number : ";
-    var labelCategory = createElement("label");
-    labelCategory.setAttribute("for", "name");
-    labelCategory.innerHTML = "Category : ";
+    labelPhone.innerHTML = "Phone : ";
+
+    var CategoryHeader = createElement("h4");
+    CategoryHeader.innerHTML = "Category : ";
 
     var inputName = createElement("input");
     inputName.setAttribute("type", "text");
@@ -323,29 +325,179 @@
     var inputPhone = createElement("input");
     inputPhone.setAttribute("type", "tel");
     inputPhone.setAttribute("name", "phone");
-    inputPhone.setAttribute("id", "text");
+    inputPhone.setAttribute("id", "phone");
     inputPhone.setAttribute("placeholder", "9999999999");
 
-    var inputCategory = createElement("input");
-    inputCategory.setAttribute("type", "radio");
-    inputCategory.setAttribute("name", "category");
-    inputCategory.setAttribute("id", "category1");
+    var inputCategory0 = createElement("input");
+    inputCategory0.setAttribute("type", "radio");
+    inputCategory0.setAttribute("name", "category");
+    inputCategory0.setAttribute("id", "category0");
+    var label0 = createElement("label");
+    label0.setAttribute("for", "category0");
+    label0.setAttribute("class", "lbl-radio");
+    var marker0 = createElement("div", "marker");
+    var content0 = createElement("div", "content");
+    var title0 = createElement("div", "title");
+    title0.innerHTML = "U4";
+    label0.appendChild(marker0);
+    label0.appendChild(content0);
+    content0.appendChild(title0);
+
+    var inputCategory1 = createElement("input");
+    inputCategory1.setAttribute("type", "radio");
+    inputCategory1.setAttribute("name", "category");
+    inputCategory1.setAttribute("id", "category1");
+    var label1 = createElement("label");
+    label1.setAttribute("for", "category1");
+    label1.setAttribute("class", "lbl-radio");
+    var marker1 = createElement("div", "marker");
+    var content1 = createElement("div", "content");
+    var title1 = createElement("div", "title");
+    title1.innerHTML = "U6";
+    label1.appendChild(marker1);
+    label1.appendChild(content1);
+    content1.appendChild(title1);
+
+    var inputCategory2 = createElement("input");
+    inputCategory2.setAttribute("type", "radio");
+    inputCategory2.setAttribute("name", "category");
+    inputCategory2.setAttribute("id", "category2");
+    var label2 = createElement("label");
+    label2.setAttribute("for", "category2");
+    label2.setAttribute("class", "lbl-radio");
+    var marker2 = createElement("div", "marker");
+    var content2 = createElement("div", "content");
+    var title2 = createElement("div", "title");
+    title2.innerHTML = "U8";
+    label2.appendChild(marker2);
+    label2.appendChild(content2);
+    content2.appendChild(title2);
+
+    var inputCategory3 = createElement("input");
+    inputCategory3.setAttribute("type", "radio");
+    inputCategory3.setAttribute("name", "category");
+    inputCategory3.setAttribute("id", "category3");
+    var label3 = createElement("label");
+    label3.setAttribute("for", "category3");
+    label3.setAttribute("class", "lbl-radio");
+    var marker3 = createElement("div", "marker");
+    var content3 = createElement("div", "content");
+    var title3 = createElement("div", "title");
+    title3.innerHTML = "U8";
+    label3.appendChild(marker3);
+    label3.appendChild(content3);
+    content3.appendChild(title3);
+
+    var inputCategory4 = createElement("input");
+    inputCategory4.setAttribute("type", "radio");
+    inputCategory4.setAttribute("name", "category");
+    inputCategory4.setAttribute("id", "category4");
+    var label4 = createElement("label");
+    label4.setAttribute("for", "category4");
+    label4.setAttribute("class", "lbl-radio");
+    var marker4 = createElement("div", "marker");
+    var content4 = createElement("div", "content");
+    var title4 = createElement("div", "title");
+    title4.innerHTML = "U8";
+    label4.appendChild(marker4);
+    label4.appendChild(content4);
+    content4.appendChild(title4);
+
+    var inputCategory5 = createElement("input");
+    inputCategory5.setAttribute("type", "radio");
+    inputCategory5.setAttribute("name", "category");
+    inputCategory5.setAttribute("id", "category5");
+    var label5 = createElement("label");
+    label5.setAttribute("for", "category5");
+    label5.setAttribute("class", "lbl-radio");
+    var marker5 = createElement("div", "marker");
+    var content5 = createElement("div", "content");
+    var title5 = createElement("div", "title");
+    title5.innerHTML = "U8";
+    label5.appendChild(marker5);
+    label5.appendChild(content5);
+    content5.appendChild(title5);
+
+    var inputCategory6 = createElement("input");
+    inputCategory6.setAttribute("type", "radio");
+    inputCategory6.setAttribute("name", "category");
+    inputCategory6.setAttribute("id", "category6");
+    var label6 = createElement("label");
+    label6.setAttribute("for", "category6");
+    label6.setAttribute("class", "lbl-radio");
+    var marker6 = createElement("div", "marker");
+    var content6 = createElement("div", "content");
+    var title6 = createElement("div", "title");
+    title6.innerHTML = "U8";
+    label6.appendChild(marker6);
+    label6.appendChild(content6);
+    content6.appendChild(title6);
+
+    var inputCategory7 = createElement("input");
+    inputCategory7.setAttribute("type", "radio");
+    inputCategory7.setAttribute("name", "category");
+    inputCategory7.setAttribute("id", "category7");
+    var label7 = createElement("label");
+    label7.setAttribute("for", "category7");
+    label7.setAttribute("class", "lbl-radio");
+    var marker7 = createElement("div", "marker");
+    var content7 = createElement("div", "content");
+    var title7 = createElement("div", "title");
+    title7.innerHTML = "U8";
+    label7.appendChild(marker7);
+    label7.appendChild(content7);
+    content7.appendChild(title7);
+
+    var labelDate = createElement("label");
+    labelDate.setAttribute("for", "date");
+    labelDate.innerHTML = "Date Of Birth : ";
+    var inputDate = createElement("input");
+    inputDate.setAttribute("type", "date");
+    inputDate.setAttribute("name", "date");
+    inputDate.setAttribute("id", "date");
+
+    var submitButton = createElement("input");
+    submitButton.setAttribute("type", "submit");
+    submitButton.setAttribute("class", "btn");
+    submitButton.setAttribute("id", "submit");
+    submitButton.addEventListener("click", () => {
+      console.log("submitted");
+    });
 
     group1.appendChild(labelName);
     group1.appendChild(inputName);
     bookingForm.appendChild(group1);
 
-    // group.innerHTML = "";
-
     group2.appendChild(labelPhone);
     group2.appendChild(inputPhone);
     bookingForm.appendChild(group2);
 
-    group3.appendChild(labelCategory);
-    group3.appendChild(inputCategory);
+    bookingForm.appendChild(CategoryHeader);
+    group3.appendChild(inputCategory0);
+    group3.appendChild(label0);
+    group3.appendChild(inputCategory1);
+    group3.appendChild(label1);
+    group3.appendChild(inputCategory2);
+    group3.appendChild(label2);
+    group3.appendChild(inputCategory3);
+    group3.appendChild(label3);
+    group3.appendChild(inputCategory4);
+    group3.appendChild(label4);
+    group3.appendChild(inputCategory5);
+    group3.appendChild(label5);
+    group3.appendChild(inputCategory6);
+    group3.appendChild(label6);
+    group3.appendChild(inputCategory7);
+    group3.appendChild(label7);
 
     bookingForm.appendChild(group3);
-    
+
+    group4.appendChild(labelDate);
+    group4.appendChild(inputDate);
+    bookingForm.appendChild(group4);
+
+    bookingForm.appendChild(submitButton);
+
     bookingButtonContainer.appendChild(bookingButtonOpen);
     details.appendChild(bookingButtonContainer);
     details.appendChild(bookingModal);

@@ -347,7 +347,7 @@ button {
   cursor: pointer;
 }
 .booking-button-close {
-  background-image: url(../Images/close.png);
+  background-image: url(../Images/xmark-solid.png);
   color: #000;
   background-size: contain;
   background-repeat: no-repeat;
@@ -356,6 +356,7 @@ button {
   top: 0;
   right: 0;
   margin: 5% 2%;
+  border: 0;
 }
 .legend {
   width: 100%;
@@ -485,6 +486,7 @@ form {
   gap: 1em;
   padding: 1em 0;
   color: #fff;
+  flex-wrap: wrap;
 }
 form h4 {
   color: #fff;
@@ -493,18 +495,13 @@ form h4 {
 .lbl-radio {
   border: 2px solid #fff;
   height: 3.3em;
+  width: 8em;
   border-radius: 0.5em;
   padding: 0em;
   display: flex;
   position: relative;
   align-items: center;
   cursor: pointer;
-}
-.lbl-radio-small {
-  width: 6rem;
-}
-.lbl-radio-big {
-  width: 12rem;
 }
 
 .lbl-radio .content .title {
