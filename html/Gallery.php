@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,10 +10,8 @@
     <link rel="icon" href="../Images/KOPA.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
     <!-- font awesome -->
     <link rel="stylesheet" href="../css/all.min.css" />
     <!-- custom stylesheet -->
@@ -39,6 +38,39 @@
     <!-- header script -->
     <script src="../js/header.js" type="text/javascript" defer></script>
 
+
+    <!-- <script src="../js/gallery_image.js" type="text/javascript" defer></script> -->
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header-component></header-component>
+
+    <!-- Gallery section -->
+    <section id="gallery-page">
+        <h1>Kopana Gallery</h1>
+        <div class="container-fluid" id="gallery-image-grid">
+            <div class="grid">
+                <div class="grid-sizer"></div>
+                <?php
+        $dirname = "../Gallery/";
+        $images = scandir($dirname);
+        shuffle($images);
+        $ignore = Array(".", "..");
+        foreach($images as $curimg){
+            if(!in_array($curimg, $ignore)) {
+                echo '<div class="grid-item item animate-box" data-animate-effect="fadeIn"><a href="'.$dirname.$curimg.'" class="image-popup" title="Kopana gallery"><div class="img-wrap"><img src="'.$dirname.$curimg.'" alt="kyu nai ho raha bc" class="img-responsive" /></div><div class="text-wrap"><div class="text-inner popup"><div><h2>Kopana Gallery</h2></div></div></div></a></div>';
+            }
+        }
+    ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer-component></footer-component>
+
     <!-- jQuery -->
     <script src="../js/Gallery-js/jquery.min.js"></script>
     <!-- jQuery Easing -->
@@ -63,49 +95,7 @@
     <script src="../js/Gallery-js/GalleryScript.js"></script>
     <!-- gallery script -->
     <script src="../js/Gallery-js/customGalleryScript.js"></script>
-
-    <!-- <script src="../js/gallery_image.js" type="text/javascript" defer></script> -->
-  </head>
-  <body>
-    <!-- Navbar -->
-    <header-component></header-component>
-
-    <!-- Gallery section -->
-    <section id="gallery-page">
-      <h1>Kopana Gallery</h1>
-      <div class="container-fluid" id="gallery-image-grid">
-        <div class="grid">
-          <div class="grid-sizer"></div>
-          <div class="grid-item item animate-box" data-animate-effect="fadeIn">
-            <a
-              href="../Images/Gallery/img_2.webp"
-              class="image-popup"
-              title="Name of photo or title here"
-            >
-              <div class="img-wrap">
-                <img
-                  src="../Images/Gallery/img_2.webp"
-                  alt=""
-                  class="img-responsive"
-                />
-              </div>
-              <div class="text-wrap">
-                <div class="text-inner popup">
-                  <div>
-                    <h2>Name of photo or title here</h2>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- footer -->
-
-    <footer-component></footer-component>
-
     <!-- footer script -->
-  </body>
+</body>
+
 </html>
