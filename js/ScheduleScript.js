@@ -915,13 +915,13 @@
     };
     data.push(schedule);
 
-    schedule = {
-      eventName: "Youth Team : 6-8 AM.",
-      calendar: "Youth Team",
-      color: "baby-blue",
-      date: moment(saturdays[i]),
-    };
-    data.push(schedule);
+    // schedule = {
+    //   eventName: "Youth Team : 6-8 AM.",
+    //   calendar: "Youth Team",
+    //   color: "baby-blue",
+    //   date: moment(saturdays[i]),
+    // };
+    // data.push(schedule);
   }
 
   // sundays
@@ -978,44 +978,45 @@
     };
     data.push(schedule);
 
-    schedule = {
-      eventName: "Youth Team : 6-8 AM.",
-      calendar: "Youth Team",
-      color: "baby-blue",
-      date: moment(sundays[i]),
-    };
-    data.push(schedule);
+    //   schedule = {
+    //     eventName: "Youth Team : 6-8 AM.",
+    //     calendar: "Youth Team",
+    //     color: "baby-blue",
+    //     date: moment(sundays[i]),
+    //   };
+    //   data.push(schedule);
+    // }
+
+    // schedule = {
+    //   eventName: "MFA Youth League U11 : 8 AM.",
+    //   calendar: "MFA Youth League U11",
+    //   color: "grey",
+    //   date: moment("2022-10-15"),
+    // };
+    // data.push(schedule);
+
+    // schedule = {
+    //   eventName: "MFA Youth League U11 : 11 AM.",
+    //   calendar: "MFA Youth League U11",
+    //   color: "grey",
+    //   date: moment("2022-10-22"),
+    // };
+    // data.push(schedule);
+
+    // schedule = {
+    //   eventName: "MFA Second Division : 9 AM.",
+    //   calendar: "MFA Second Division",
+    //   color: "pink",
+    //   date: moment("2022-11-06"),
+    // };
+    // data.push(schedule);
+
+    // schedule = {
+    //   eventName: "MFA Second Division : 12 PM.",
+    //   calendar: "MFA Second Division",
+    //   color: "pink",
+    //   date: moment("2022-11-11"),
+    // };
+    // data.push(schedule);
   }
-
-  schedule = {
-    eventName: "MFA Youth League U11 : 8 AM.",
-    calendar: "MFA Youth League U11",
-    color: "grey",
-    date: moment("2022-10-15"),
-  };
-  data.push(schedule);
-
-  schedule = {
-    eventName: "MFA Youth League U11 : 11 AM.",
-    calendar: "MFA Youth League U11",
-    color: "grey",
-    date: moment("2022-10-22"),
-  };
-  data.push(schedule);
-
-  schedule = {
-    eventName: "MFA Second Division : 9 AM.",
-    calendar: "MFA Second Division",
-    color: "pink",
-    date: moment("2022-11-06"),
-  };
-  data.push(schedule);
-
-  schedule = {
-    eventName: "MFA Second Division : 12 PM.",
-    calendar: "MFA Second Division",
-    color: "pink",
-    date: moment("2022-11-11"),
-  };
-  data.push(schedule);
 })();

@@ -85,8 +85,6 @@ button.white:hover {
   }
 }
 .banner {
-  position: relative;
-  width: 100%;
   background: url(../Images/3040.webp);
   background-size: cover;
   height: 100vh;
@@ -99,10 +97,11 @@ button.white:hover {
   border-radius: 50px;
   color: #fff;
   line-height: 2.5;
-  vertical-align: middle;
+  text-align: center;
+  width: 71%;
   transition: 0.6s;
   padding: 2% 0;
-  margin: 0 9%;
+  margin: 0 auto;
 }
 
 .banner-container h1 {
@@ -117,7 +116,7 @@ button.white:hover {
   padding: 0 4%;
 }
 .banner-container p {
-  padding: 0 13% 1% 4%;
+  margin: 0 10%;
   line-height: 1.8;
   font-size: 22px;
   color: #dedede;
@@ -169,16 +168,10 @@ button.white:hover {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .example {
-    background: green;
-  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .example {
-    background: green;
-  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -196,6 +189,7 @@ button.white:hover {
 @media only screen and (min-width: 992px) {
   .banner-container {
     top: 50%;
+    width: 80%;
   }
   .banner-container h2 {
     display: inline-block;
@@ -208,6 +202,7 @@ button.white:hover {
 @media only screen and (min-width: 2000px) {
   .banner-container {
     top: 45%;
+    width: 80%;
   }
   .banner-container h2 {
     display: inline-block;
@@ -250,6 +245,17 @@ button.white:hover {
   border: 1px;
   border-radius: 45px 45px 0 0;
   padding-top: 10px;
+}
+.centers-card-image {
+  background: url(../Images/om-turf.jpeg);
+  width: 95%;
+  height: 30vh;
+  margin: 10px auto 0;
+  border: 1px;
+  border-radius: 45px 45px 0 0;
+  cursor: pointer;
+  background-position-y: 68%;
+  background-size: cover;
 }
 .centers-card-body {
   padding: 2px 16px;
@@ -362,7 +368,7 @@ button.white:hover {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .centers-card {
-    width: 30vw;
+    width: 35vw;
   }
 }
 
@@ -628,6 +634,7 @@ button.white:hover {
   width: 100%;
   padding: 40px 0;
 }
+
 .slide-content {
   margin: 0 100px;
   overflow: hidden;
@@ -772,6 +779,9 @@ button.white:hover {
   }
   .swiper-navBtn {
     display: flex !important;
+  }
+  .swiper-slide {
+    width: 150px !important;
   }
 }
 

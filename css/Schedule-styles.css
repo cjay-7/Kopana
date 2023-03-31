@@ -372,8 +372,8 @@ button {
 .entry {
   position: relative;
   padding: 0 0 0 25px;
-  margin: 0 20px;
-  font-size: 13px;
+  margin: 15px 11px;
+  font-size: 16px;
   display: inline-block;
   line-height: 30px;
   background: transparent;
@@ -863,5 +863,13 @@ input[type="radio"]:focus + .lbl-radio > .marker {
     position: absolute;
     bottom: 10px;
     left: 5px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .day {
+    width: 11%;
+    padding: 0px 0px;
+    margin: 35px 10px;
   }
 }

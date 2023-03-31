@@ -135,7 +135,7 @@ footerTemplate.innerHTML = `
   <footer>
   <div class="footer-container">
     <div class="footer-logo-container">
-      <img class="footer-logo" src="../Images/KOPA.webp"></img>
+      <img class="footer-logo" src="../Images/KOPA.png"></img>
       <h3>Made with <span class="fa-solid fa-heart"></span> by Jay
       </h3>
     </div>
@@ -176,9 +176,9 @@ footerTemplate.innerHTML = `
                 <li>
                   <h3 class="footer-head">CONTACT</h3>
               
-                  <a href="tel:+91 70457 08936">Gary D’Souza: <span>+91 70457 08936</span></a>
+                  
                   <br/>
-                  <a href="tel:+91 90290 48479">Baptist Fernandes: <span>+91 90290 48479</span></a>
+                  <a href="tel:+91 7304348479"><span>+91 7304348479</span></a>
                   <br/>
                   <a href="mailto:kopanafootball@gmail.com" target="_blank">Email: <span>kopanafootball@gmail.com</span></a>
                 </li>

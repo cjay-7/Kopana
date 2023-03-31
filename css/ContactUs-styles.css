@@ -22,7 +22,7 @@ b {
   margin: 11% 3% 5%;
   border: 1px solid white;
   border-radius: 25px;
-  padding: 2%;
+  padding: 1%;
 }
 .flex {
   display: flex;
@@ -31,10 +31,10 @@ b {
   width: 40%;
   border: 1px solid white;
   border-radius: 25px;
-  padding: 3% 2%;
+  padding: 0 2% 5%;
   background-color: #202125;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   /* background-image: url(../Images/janosch-diggelmann-cfNYZJQVDRY-unsplash.jpeg); */
   /* background-image: url(../Images/nick-fewings-Twm0RDc-FvE-unsplash.jpeg); */
 }
@@ -135,6 +135,11 @@ b {
   justify-content: space-between;
   margin-right: 3%;
 }
+
+.group > input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
 form h4 {
   color: #fff;
   margin-top: 1em;
@@ -189,7 +194,7 @@ input[type="radio"]:focus + .lbl-radio > .marker {
 
 #submit {
   float: right;
-  margin-top: 1.2em;
+  margin-top: 0.2em;
   margin-right: 0.8em;
   background-color: #0c8346;
   color: #fff;
