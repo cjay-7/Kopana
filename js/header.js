@@ -177,7 +177,7 @@ headerTemplate.innerHTML = `
         <li><a href="../html/AboutUs.html">About Us</a></li>
         <li><a href="../html/News.html">News</a></li>
         <li><a href="../html/Schedule.html">Schedule</a></li>
-        <li><a href="../html/Gallery.html">Gallery</a></li>
+        <li><a href="../html/Gallery.php">Gallery</a></li>
         <li><a href="../html/ContactUs.html">Contact Us</a></li>
       </ul>
     </header>

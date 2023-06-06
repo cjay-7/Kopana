@@ -53,6 +53,7 @@
             <div class="grid">
                 <div class="grid-sizer"></div>
                 <?php
+                header("HTTP/1.1 500 Internal Server Error");
         $dirname = "../Gallery/";
         $images = scandir($dirname);
         shuffle($images);
@@ -67,9 +68,7 @@
         </div>
     </section>
 
-    <!-- footer -->
 
-    <footer-component></footer-component>
 
     <!-- jQuery -->
     <script src="../js/Gallery-js/jquery.min.js"></script>
@@ -96,6 +95,10 @@
     <!-- gallery script -->
     <script src="../js/Gallery-js/customGalleryScript.js"></script>
     <!-- footer script -->
+    <script src="../js/footer.js" type="text/javascript" defer></script>
+    <!-- footer -->
+
+    <footer-component></footer-component>
 </body>
 
 </html>

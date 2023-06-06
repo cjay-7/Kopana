@@ -119,6 +119,7 @@ figure {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  margin: 0 auto;
 }
 #gallery-image-grid .item a .text-wrap {
   position: absolute;
