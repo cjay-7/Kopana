@@ -107,3 +107,19 @@ function sendMail() {
 
   window.location.href = link;
 }
+
+// Get tomorrow's date
+var tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+
+// Format the date as DD/MM/YYYY
+var day = String(tomorrow.getDate()).padStart(2, "0");
+var month = String(tomorrow.getMonth() + 1).padStart(2, "0");
+var year = tomorrow.getFullYear();
+var formattedDate = day + "/" + month + "/" + year;
+
+// Update the "Next Session" dates
+var nextSessionDates = document.querySelectorAll("#nextSessionDate");
+nextSessionDates.forEach(function (element) {
+  element.textContent = formattedDate;
+});
