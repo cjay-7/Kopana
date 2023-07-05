@@ -85,7 +85,7 @@ button.white:hover {
   }
 }
 .banner {
-  background: url(../Images/3040.webp);
+  background: url(../Images/index_banner.jpeg);
   background-size: cover;
   height: 100vh;
 }
@@ -131,9 +131,9 @@ button.white:hover {
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .banner {
-    background: url(../Images/_DSC5512.jpg);
+    background: url(../Images/mobile_index_banner.jpeg);
     background-size: cover;
-    background-position-x: center;
+    background-position-x: 65%;
     overflow-x: hidden;
   }
   .banner-container {
