@@ -673,7 +673,94 @@ hr {
   background-position: center;
   background-image: url(../Images/baps.jpg);
 }
-
+.parallax-bg-3 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 137%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../Images/coach-photos/Meet.jpg);
+}
+.parallax-bg-4 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 137%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../Images/coach-photos/Dani.jpg);
+}
+.parallax-bg-5 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 190%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../Images/coach-photos/Amith.jpg);
+}
+.parallax-bg-6 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 137%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../Images/coach-photos/Tarshish.jpg);
+}
+.parallax-bg-7 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 137%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../Images/coach-photos/Kiran.jpg);
+}
+.parallax-bg-8 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 137%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../Images/coach-photos/ajay.jpg);
+}
+.parallax-bg-9 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 137%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../Images/coach-photos/Suhas.jpg);
+}
+.parallax-bg-10 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 137%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../Images/coach-photos/Kunal.jpg);
+}
 .Founders-title {
   font-size: 37px;
   font-weight: 300;

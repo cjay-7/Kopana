@@ -247,7 +247,7 @@ button.white:hover {
   padding-top: 10px;
 }
 .centers-card-image {
-  background: url(../Images/om-turf.jpeg);
+  background: url(../Images/Brunell\ Turf.JPG);
   width: 95%;
   height: 30vh;
   margin: 10px auto 0;
@@ -255,6 +255,17 @@ button.white:hover {
   border-radius: 45px 45px 0 0;
   cursor: pointer;
   background-position-y: 68%;
+  background-size: cover;
+}
+.centers-card-image2 {
+  background: url(../Images/St\ josephs\ turf.webp);
+  width: 95%;
+  height: 30vh;
+  margin: 10px auto 0;
+  border: 1px;
+  border-radius: 45px 45px 0 0;
+  cursor: pointer;
+  background-position-y: 50%;
   background-size: cover;
 }
 .centers-card-body {

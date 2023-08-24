@@ -178,14 +178,13 @@ footerTemplate.innerHTML = `
               
                   
                   <br/>
-                  <a href="tel:+91 7304348479"><span>+91 7304348479</span></a>
+                  <a href="tel:+91 7045532450">Phone: <span>+91 7045532450</span></a>
                   <br/>
                   <a href="mailto:kopanafootball@gmail.com" target="_blank">Email: <span>kopanafootball@gmail.com</span></a>
                 </li>
                 <li>
-                  <p>VP Road, LIC Colony, Suresh Colony,
-                  Vile Parle West
-                  Mumbai 400056</p>
+                  <p>Brunell Ground,RN Shah School,
+                  Juhu, Mumbai 400049</p>
                 </li>
                 <li>
                   <i class="fa-brands fa-facebook"></i>
